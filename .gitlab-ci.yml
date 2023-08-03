@@ -1,0 +1,37 @@
+include:
+- template: Security/Dependency-Scanning.gitlab-ci.yml
+
+stages:
+- test
+- build
+- pages
+
+variables:
+  SECURE_ANALYZERS_PREFIX: docker.repo.frg.tech/gitlab-org/security-products/analyzers
+
+build:
+  stage: build
+  image: docker.repo.frg.tech/node:16-slim
+  script:
+  - apt-get update
+  - apt-get install --no-install-recommends -y curl jq
+  - source <(curl -s -k https://gitlab.frg.tech/cloud/ci-standards/-/raw/master/gitlab/npm/setup-npmrc.sh)
+  - npm --proxy http://proxy-dev.frg.tech:3128 update
+  - source <(curl -k https://gitlab.frg.tech/cloud/ci-standards/-/raw/master/gitlab/npm/replace-npm-version.sh)
+  - npm install
+  - npm run build
+  - npm publish --registry http://repo.frg.tech/artifactory/api/npm/npm-dev-local
+
+pages:
+  image: docker.repo.frg.tech/node:16-slim
+  script:
+  - yarn
+  - yarn run build-storybook --output-dir public
+  artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - public
+  rules:
+  # This ensures that only pushes to the default branch will trigger
+  # a pages deploy
+  - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
