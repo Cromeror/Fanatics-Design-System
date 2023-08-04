@@ -1,4 +1,6 @@
-import type { Preview } from "@storybook/react";
+import type {Preview} from "@storybook/react";
+import {ConfigProvider} from "antd";
+import {lightTheme} from "../themes/light-theme";
 
 const preview: Preview = {
   parameters: {
@@ -10,6 +12,9 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    Story => (<ConfigProvider theme={lightTheme}><Story/></ConfigProvider>)
+  ]
 };
 
 export default preview;
