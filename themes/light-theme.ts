@@ -11,7 +11,6 @@ export const lightTheme = {
     lineHeightHeading3: "36px",
     lineHeightHeading4: "32px",
     lineHeightHeading5: "28px",
-
-    colorTextBase: "#0958d9",
+    "fontSizeHeading-ExtraLarge": "36px",
   }
 }
