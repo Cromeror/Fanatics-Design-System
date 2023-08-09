@@ -14,12 +14,37 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Type: Story = {
+
+export const Base: Story = {
   args: {
-    strong: false,
-    underline: false,
-    delete: false,
-    italic: false,
-    children: 'Text'
+    children: 'Table cell text',
+  },
+};
+
+export const Strong: Story = {
+  args: {
+    strong: true,
+    children: 'Table cell text'
+  },
+};
+
+export const Underline: Story = {
+  args: {
+    underline: true,
+    children: 'Table cell text'
+  },
+};
+
+export const Delete: Story = {
+  args: {
+    delete: true,
+    children: 'Table cell text'
+  },
+};
+
+export const Italic: Story = {
+  args: {
+    italic: true,
+    children: 'Table cell text'
   },
 };

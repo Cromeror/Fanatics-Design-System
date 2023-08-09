@@ -14,9 +14,34 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Type: Story = {
+
+export const Level1: Story = {
   args: {
     level: 1,
-    children: 'Title',
+    children: 'Table cell text',
+  },
+};
+export const Level2: Story = {
+  args: {
+    level: 2,
+    children: 'Table cell text',
+  },
+};
+export const Level3: Story = {
+  args: {
+    level: 1,
+    children: 'Table cell text',
+  },
+};
+export const Level4: Story = {
+  args: {
+    level: 2,
+    children: 'Table cell text',
+  },
+};
+export const Level5: Story = {
+  args: {
+    level: 1,
+    children: 'Table cell text',
   },
 };
