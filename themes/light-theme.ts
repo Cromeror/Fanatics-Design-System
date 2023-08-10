@@ -1,6 +1,7 @@
 import {color} from './color'
 export const lightTheme = {
   token: {
+
     // Headings
     "lineHeightHeading-extraLarge": "48px",
     "lineHeightHeading-large": "40px",
@@ -13,6 +14,18 @@ export const lightTheme = {
     "fontSizeHeading-medium": 28,
     "fontSizeHeading-small": 24,
     "fontSizeHeading-extraSmall": 20,
+
+    fontSizeHeading1: 36,
+    fontSizeHeading2: 32,
+    fontSizeHeading3: 28,
+    fontSizeHeading4: 24,
+    fontSizeHeading5: 20,
+
+    lineHeightHeading1: "48px",
+    lineHeightHeading2: "40px",
+    lineHeightHeading3: "36px",
+    lineHeightHeading4: "32px",
+    lineHeightHeading5: "28px",
 
     // Titles
     "lineHeightTitle-large": "40px",

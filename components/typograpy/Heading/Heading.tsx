@@ -23,12 +23,12 @@ const HEADING_LINE_HEIGHT = {
   "extra-small": "lineHeightHeading-extraSmall"
 }
 
-export const Heading = ({children, as: Component = Typography.Title, size = "extra-large", lineHeight = "extra-large", ...otherProps}: HeadingProps) => {
+export const Heading = ({children, as: Component = Typography.Title, size = "extra-large", ...otherProps}: HeadingProps) => {
   const {token} = theme.useToken();
 
   const styles = {
     fontSize: token[HEADING_SIZES[size]],
-    lineHeight:  token[HEADING_LINE_HEIGHT[lineHeight]],
+    lineHeight:  token[HEADING_LINE_HEIGHT[size]],
   }
   return <Component style={styles} {...otherProps}>{children}</Component>
 }

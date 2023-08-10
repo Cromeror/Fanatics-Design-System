@@ -5,7 +5,6 @@ interface TitleProps {
   children?: ReactElement | string;
   as?: ReactElement;
   size?: "large" | "medium" | "small",
-  lineHeight?: "large" | "medium" | "small",
 }
 
 const TITLE_SIZES = {
@@ -20,12 +19,12 @@ const TITLE_LINE_HEIGHT = {
   small: "lineHeightTitle-small"
 }
 
-export const Title = ({children, as: Component = Typography.Text, size = "large", lineHeight = "large", ...otherProps}: TitleProps) => {
+export const Title = ({children, as: Component = Typography.Text, size = "large", ...otherProps}: TitleProps) => {
   const {token} = theme.useToken();
 
   const styles = {
     fontSize: token[TITLE_SIZES[size]],
-    lineHeight: token[TITLE_LINE_HEIGHT[lineHeight]],
+    lineHeight: token[TITLE_LINE_HEIGHT[size]],
   }
   return <Component style={styles} {...otherProps}>{children}</Component>
 }
