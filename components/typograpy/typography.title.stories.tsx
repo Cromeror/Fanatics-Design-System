@@ -29,19 +29,19 @@ export const Level2: Story = {
 };
 export const Level3: Story = {
   args: {
-    level: 1,
+    level: 3,
     children: 'Table cell text',
   },
 };
 export const Level4: Story = {
   args: {
-    level: 2,
+    level: 4,
     children: 'Table cell text',
   },
 };
 export const Level5: Story = {
   args: {
-    level: 1,
+    level: 5,
     children: 'Table cell text',
   },
 };
