@@ -1,4 +1,5 @@
 import { Button as AntdButton, ButtonProps as AntdButtonProps, theme } from "antd";
+import { useState } from "react";
 
 export type ButtonProps = AntdButtonProps;
 
@@ -18,7 +19,7 @@ export const BUTTON_BG_COLOR = {
   "text-dark-Active": "colorBgContainerDisabled",
 
   //Hover
-  "primary-Hover": "colorSecondaryBg",
+  "primary-Hover": "colorTertiary",
   "secondary-Hover": "colorBackground",
   "text-Hover": "colorBackground",
   "link-Hover": "colorBackground",
@@ -41,42 +42,57 @@ export const BUTTON_BG_COLOR = {
 
 export const BUTTON_SIZE = {
   small: 'small',
-  default: 'default',
+  default: 'middle',
   large: 'large',
 };
 
 export const BUTTON_TYPE = {
   primary: 'primary',
-  default: 'default',
+  secondary: 'default',
   text: 'text',
   link: 'link',
+  "text-dark": "primary"
 };
 
 
 export const Button = ({
   children,
-  size = 'large',
-  color = 'primary-default',
-  type = 'primary',
+  size = "large",
+  color = null,
+  type = BUTTON_TYPE["text"],
+  hoverColor = null,
 }: ButtonProps & {
   hoverColor?: string | null;
 }) => {
   const { token } = theme.useToken();
 
-  const styles = {
-    backgroundColor: token[BUTTON_BG_COLOR[color]],
-    color: token[BUTTON_TYPE[color]]
-  }
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const styles = {
+    backgroundColor: isHovered && hoverColor ? token[BUTTON_BG_COLOR[hoverColor]] : token[BUTTON_BG_COLOR[color]],
+    color: token[BUTTON_TYPE[color]],
+  };
   return (
     <AntdButton
       style={styles}
       size={BUTTON_SIZE[size]}
       type={BUTTON_TYPE[type]}
       disabled={false}
-      colorPrimaryHover={'primary-disable'}
-    >
-      {children}
-    </AntdButton>
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+  >
+    {children}
+  </AntdButton>
   );
-}
+};
+
+export default Button;
