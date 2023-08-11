@@ -1,5 +1,6 @@
 import {ReactElement} from "react";
 import {theme, Typography} from "antd";
+import {LEVEL_TYPOGRAPHY} from "./Heading";
 
 interface TitleProps {
   children?: ReactElement | string;
@@ -19,12 +20,13 @@ const TITLE_LINE_HEIGHT = {
   small: "lineHeightTitle-small"
 }
 
-export const Title = ({children, as: Component = Typography.Text, size = "large", ...otherProps}: TitleProps) => {
+export const Title = ({children, as: Component = Typography.Title, size = "medium", ...otherProps}: TitleProps) => {
   const {token} = theme.useToken();
 
   const styles = {
     fontSize: token[TITLE_SIZES[size]],
     lineHeight: token[TITLE_LINE_HEIGHT[size]],
+    margin: 0
   }
-  return <Component style={styles} {...otherProps}>{children}</Component>
+  return <Component style={styles} level={LEVEL_TYPOGRAPHY[size]} {...otherProps}>{children}</Component>
 }
