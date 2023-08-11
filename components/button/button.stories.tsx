@@ -1,16 +1,13 @@
 import { DeleteOutlined } from "@ant-design/icons";
 import type { Meta, StoryObj } from "@storybook/react";
 import type { ButtonType } from ".";
-import Button from ".";
+import { Button } from "./button";
 
 const ButtonTypes: Array<ButtonType | undefined> = [
   "link",
   "text",
-  "ghost",
   "default",
   "primary",
-  "dashed",
-  undefined,
 ];
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -66,7 +63,7 @@ const meta = {
     },
     size: {
       description: "Set the size of the button",
-      table: { defaultValue: { summary: "middle" } },
+      table: { defaultValue: { summary: "default" } },
     },
     styles: {
       description: "Semantic DOM style",
@@ -93,6 +90,135 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+// Primary Default
+export const ButtonPrimaryDefault: Story = {
+  args: {
+    type: "primary",
+    size: "default",
+    color: "primary-default",
+    children: "Click Me",
+  },
+};
+
+export const ButtonPrimaryLarge: Story = {
+  args: {
+    type: "primary",
+    size: "large",
+    color: "primary-default",
+    children: "Click Me",
+  },
+};
+
+export const ButtonPrimarySmall: Story = {
+  args: {
+    type: "primary",
+    size: "small",
+    color: "primary-default",
+    children: "Click Me",
+  },
+};
+
+//Secondary Default
+export const ButtonSecondaryDefault: Story = {
+  args: {
+    type: "secondary",
+    size: "default",
+    children: "Click Me",
+  },
+};
+
+export const ButtonSecondarylarge: Story = {
+  args: {
+    type: "secondary",
+    size: "large",
+    children: "Click Me",
+  },
+};
+export const ButtonSecondarySmall: Story = {
+  args: {
+    type: "secondary",
+    size: "small",
+    children: "Click Me",
+  },
+};
+
+//Text Default
+export const ButtonTextDefault: Story = {
+  args: {
+    type: "text",
+    size: "default",
+    children: "Click Me",
+  },
+};
+
+export const ButtonTextlarge: Story = {
+  args: {
+    type: "text",
+    size: "large",
+    children: "Click Me",
+  },
+};
+export const ButtonTextSmall: Story = {
+  args: {
+    type: "text",
+    size: "small",
+    children: "Click Me",
+  },
+};
+
+// Link
+export const ButtonLinkDefault: Story = {
+  args: {
+    type: "link",
+    size: "default",
+    children: "Click Me",
+  },
+};
+
+export const ButtonLinklarge: Story = {
+  args: {
+    type: "link",
+    size: "large",
+    children: "Click Me",
+  },
+};
+export const ButtonLinkSmall: Story = {
+  args: {
+    type: "link",
+    size: "small",
+    children: "Click Me",
+  },
+};
+
+//Text-dark
+export const ButtonTextDarkDefault: Story = {
+  args: {
+    type: "text-dark",
+    size: "default",
+    color: "text-dark",
+    children: "Click Me",
+
+  },
+};
+
+export const ButtonTextDarklarge: Story = {
+  args: {
+    type: "text-dark",
+    size: "large",
+    color: "text-dark",
+    children: "Click Me",
+  },
+};
+export const ButtonTextDarkSmall: Story = {
+  args: {
+    type: "text-dark",
+    size: "small",
+    color: "text-dark",
+    children: "Click Me",
+  },
+};
+
+
 export const Type: Story = {
   args: {
     type: "primary",
@@ -105,7 +231,7 @@ export const Type: Story = {
     icon: null,
     loading: false,
     shape: "default",
-    size: "middle",
+    size: "large",
     target: "",
     onClick: undefined,
     styles: undefined,

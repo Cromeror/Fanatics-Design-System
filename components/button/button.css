@@ -1,0 +1,6 @@
+
+
+.custom-button-colorTertiary {
+  background-color: red !important;
+  color: var(--colorPrimary);
+}
