@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
-import {Heading} from "../components/typograpy/Heading/Heading";
+import {Heading} from "../components/typography/Heading";
 import {ConfigProvider, Typography} from "antd";
 import {lightTheme} from "../themes/light-theme";
 

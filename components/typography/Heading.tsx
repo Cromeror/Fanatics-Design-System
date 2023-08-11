@@ -3,11 +3,10 @@ import {theme, Typography} from "antd";
 
 interface HeadingProps {
   children?: ReactElement | string;
-  as?: ReactElement;
   size?: "extra-large" | "large" | "medium" | "small" | "extra-small"
 }
 
-const HEADING_SIZES = {
+export const HEADING_SIZES = {
   "extra-large": "fontSizeHeading-extraLarge",
   large: "fontSizeHeading-large",
   medium: "fontSizeHeading-medium",
@@ -15,7 +14,7 @@ const HEADING_SIZES = {
   "extra-small": "fontSizeHeading-extraSmall"
 }
 
-const HEADING_LINE_HEIGHT = {
+export const HEADING_LINE_HEIGHT = {
   "extra-large": "lineHeightHeading-extraLarge",
   large: "lineHeightHeading-large",
   medium: "lineHeightHeading-medium",
@@ -23,12 +22,21 @@ const HEADING_LINE_HEIGHT = {
   "extra-small": "lineHeightHeading-extraSmall"
 }
 
-export const Heading = ({children, as: Component = Typography.Title, size = "extra-large", ...otherProps}: HeadingProps) => {
+export const LEVEL_TYPOGRAPHY = {
+  "extra-large": 1,
+  large: 2,
+  medium: 3,
+  small: 4,
+  "extra-small": 5
+}
+
+export const Heading = ({children, size = "medium"}: HeadingProps) => {
   const {token} = theme.useToken();
 
   const styles = {
     fontSize: token[HEADING_SIZES[size]],
-    lineHeight:  token[HEADING_LINE_HEIGHT[size]],
+    lineHeight: token[HEADING_LINE_HEIGHT[size]],
+    margin: 0
   }
-  return <Component style={styles} {...otherProps}>{children}</Component>
+  return <Typography.Title style={styles} level={LEVEL_TYPOGRAPHY[size]}>{children}</Typography.Title>
 }

@@ -5,7 +5,6 @@ interface BodyTextProps {
   children?: ReactElement | string;
   as?: ReactElement;
   size?: "extra-large" | "large" | "base" | "small" | "extra-small"
-  lineHeight?: "extra-large" | "large" | "base" | "small" | "extra-small"
   strong?: boolean;
   underline?: boolean;
   delete?: boolean;
@@ -15,7 +14,7 @@ interface BodyTextProps {
 const BODY_TEXT_SIZES = {
   "extra-large": "fontSizeBodyText-extraLarge",
   large: "fontSizeBodyText-large",
-  base: "fontSizeBodyText-medium",
+  base: "fontSizeBodyText-base",
   small: "fontSizeBodyText-small",
   "extra-small": "fontSizeBodyText-extraSmall"
 }
@@ -23,19 +22,18 @@ const BODY_TEXT_SIZES = {
 const BODY_TEXT_LINE_HEIGHT = {
   "extra-large": "lineHeightBodyText-extraLarge",
   large: "lineHeightBodyText-large",
-  base: "lineHeightBodyText-medium",
+  base: "lineHeightBodyText-base",
   small: "lineHeightBodyText-small",
   "extra-small": "lineHeightBodyText-extraSmall"
 }
 
-export const BodyText = ({children, size = "large", lineHeight = "large", ...otherProps}: BodyTextProps) => {
+export const BodyText = ({children, size = "base", as: Component = Typography.Text, ...otherProps}: BodyTextProps) => {
   const {token} = theme.useToken();
 
   const styles = {
     fontSize: token[BODY_TEXT_SIZES[size]],
-    lineHeight: token[BODY_TEXT_LINE_HEIGHT[lineHeight]],
-
+    lineHeight: token[BODY_TEXT_LINE_HEIGHT[size]],
   }
 
-  return <Typography.Text style={styles} {...otherProps}>{children}</Typography.Text>
+  return <Component style={styles} {...otherProps}>{children}</Component>
 }
