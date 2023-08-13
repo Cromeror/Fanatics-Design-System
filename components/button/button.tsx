@@ -1,5 +1,4 @@
 import { Button as AntdButton, ButtonProps as AntdButtonProps, ConfigProvider, theme } from "antd";
-import { useState } from "react";
 import {color} from '../../themes/color'
 
 export type ButtonProps = AntdButtonProps;
