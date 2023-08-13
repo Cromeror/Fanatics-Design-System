@@ -13,10 +13,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Heading as={Typography.Title}>Table cell text</Heading>
       <Title as={Typography.Text}>Table cell text</Title>
       <BodyText underline={true}>Table cell text</BodyText>
-      <Button size="default" color="primary-default" type='primary' hoverColor='primary-Hover'>
+      <Button size="default" color="primary-active" type='primary' hoverColor='primary-Hover'>
         Botón
       </Button>
-      <Button size="small" color="primary-default" type='primary' hoverColor='primary-Hover'>
+      <Button size="small" type='link' hoverColor='primary-Hover'>
         Botón
       </Button>
       <Button size="large" type='text' hoverColor='primary-Hover'>
