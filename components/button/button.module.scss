@@ -1,0 +1,15 @@
+@import "themes/antd.tokens";
+
+.primaryButton {
+  &:not(:disabled):not(.ant-btn-disabled):hover {
+    background-color: #ffffff;
+    color: $colorErrorHover;
+  }
+}
+
+.secondaryButton {
+  &:not(:disabled):not(.ant-btn-disabled):hover {
+    background-color: $red10;
+    color: $colorErrorTextHover;
+  }
+}
