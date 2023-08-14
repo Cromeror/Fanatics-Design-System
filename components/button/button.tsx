@@ -1,5 +1,11 @@
+<<<<<<< Updated upstream
 import { Button as AntdButton, ButtonProps as AntdButtonProps, ConfigProvider, theme } from "antd";
 import {color} from '../../themes/color'
+=======
+import { Button as AntdButton, ButtonProps as AntdButtonProps, theme } from "antd";
+import styles from './button.css';
+
+>>>>>>> Stashed changes
 
 export type ButtonProps = AntdButtonProps;
 
@@ -54,6 +60,7 @@ export const BUTTON_TYPE = {
   "text-dark": "primary"
 };
 
+<<<<<<< Updated upstream
 export const buttonTheme = {
   token: {
     colorSecondary: color.colorBgContainer,
@@ -134,6 +141,28 @@ export const Button = ({
     {children}
       </AntdButton>
     </ConfigProvider>
+=======
+export const Button = ({
+  children,
+  size = "large",
+  color = "primary-default",
+  type = "primary",
+  hoverColor = null,
+}: ButtonProps & {
+  hoverColor?: string | null;
+}) => {
+  const { token } = theme.useToken();
+
+  return (
+    <AntdButton
+      className={styles["custom-button-colorTertiary"]}
+      size={BUTTON_SIZE[size]}
+      type={BUTTON_TYPE[type]}
+      disabled={false}
+    >
+      {children}
+    </AntdButton>
+>>>>>>> Stashed changes
   );
 };
 
