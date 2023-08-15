@@ -1,4 +1,4 @@
-export const color = {
+export const Color = {
   // Seed Colors
   colorBlack: "#25292F",
   colorWhite: "#FDFDFD",

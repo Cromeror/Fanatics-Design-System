@@ -1,5 +1,5 @@
 import {Button as AntdButton, ConfigProvider} from "antd";
-import {color} from '../../themes/color'
+import {Color} from '../../themes/color'
 import stylesButton from "./button.module.scss"
 
 export const buttonTheme = {
@@ -7,20 +7,20 @@ export const buttonTheme = {
     //primary
     colorPrimaryActive: "yellow",//color.colorPrimaryActive,
     colorBgContainerDisabled: "rgba(37, 41, 47, 0.04)", //le puse ese que es el que esta en el figma pero no esta correcto parece
-    colorPrimaryHover: color.colorInfoHover,
+    colorPrimaryHover: Color.colorInfoHover,
     colorPrimaryTextHover: "red",
     //
-    colorSecondary: color.colorBgContainer,
+    colorSecondary: Color.colorBgContainer,
     colorTextButton: "transparent",
     colorLink: "transparent", // color.colorPrimary, Me di cuenta que en el figma tiene una propiedad color primary pero al ponerle tipo link se queda blanco asi que no cre que se refiera al background
 
     //Hover
-    colorSecondaryHover: color.colorBgContainer, //cambia es el color del Texto
+    colorSecondaryHover: Color.colorBgContainer, //cambia es el color del Texto
     colorTextHover: "red", // Este no esta especificado correctamente
-    colorLinkHover: color.colorInfoHover, // cambia el color del texto
+    colorLinkHover: Color.colorInfoHover, // cambia el color del texto
 
     //Active
-    colorSecondaryActive: color.colorBgContainer,
+    colorSecondaryActive: Color.colorBgContainer,
     colorTextActive: "transparent",
     colorLinkActive: "transparent", // le puse transparente pero no esta especificado
 
