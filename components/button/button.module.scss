@@ -1,44 +1,65 @@
 @import "themes/antd.tokens";
 
+.buttonDisable {
+  color: $colorSecondaryBgHover;
+  //border-radius: var(--border-radius-border-radius-small, 4px);
+  border: 1px solid $colorBorder;
+  background: $colorBgContainerDisabled;
+}
+
 .primaryButton {
-  &:not(:disabled):not(.ant-btn-disabled):hover {
-    background-color: $colorPrimaryHover;
-    color: $colorBackground;
+  //border-radius: ; TODO: esta pendiente por token
+  border: 1px solid $colorPrimary;
+  background: $colorPrimary;
+  color: #FFFFFF; //TODO: pendiente por usar token, se necesita actualizar la paleta de colores
+
+  &:not(:disabled):not(.ant-btn-disabled) {
+    &:hover {
+      border: 1px solid $colorPrimaryHover;
+      background: $colorPrimaryHover;
+    }
+
+    &:active {
+      border: 1px solid $colorPrimaryActive;
+      background: $colorPrimaryActive;
+    }
+
+    &:focus {
+      border: 3px solid $colorPrimaryActive;
+      background: $colorPrimary;
+      box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.04); //TODO: pending for tokens
+      height: $controlHeight + 4px;
+    }
   }
 
-  &:not(:disabled):not(.ant-btn-disabled):active {
-    background-color: $colorInfoActive;
-    color: $colorPrimary;
-    border: 5px solid $blue10;
+  &.ant-btn-disabled, &:disabled {
+    @extend .buttonDisable
   }
 
-  &:not(:disabled):not(.ant-btn-disabled):focus {
-    background-color: $colorInfoBase;
-    color: $colorBackground;
-    border: 3px solid $colorInfoActive;
-  }
+  &Danger {
+    color: #FFFFFF; //TODO: pendiente por usar token, se necesita actualizar la paleta de colores
 
-  &.ant-btn-disabled,
-  &.primaryButton:disabled {
-    background-color: $colorSecondaryBg;
-    color: $colorSecondaryBgHover;
-    border: 1px solid $colorSecondaryBgHover;
-  }
+    &:not(:disabled):not(.ant-btn-disabled) {
+      background: $colorError;
 
-  &.danger.textDarkButton:not(:disabled):not(.ant-btn-disabled):hover {
-    background-color: $colorErrorBorderHover;
-    color: $colorBackground;
-  }
+      &:hover {
+        background: $colorErrorHover;
+        border: 1px solid $colorErrorHover;
+      }
 
-  &.danger.textDarkButton:not(:disabled):not(.ant-btn-disabled):active {
-    background-color: $colorErrorActive;
-    color: $colorBackground;
-  }
+      &:active {
+        background: $colorErrorActive;
+      }
 
-  &.danger.textDarkButton:not(:disabled):not(.ant-btn-disabled):focus {
-    background-color: $colorErrorBorderHover;
-    color: $colorBackground;
-    border: 1px solid $colorErrorBorderHover;
+      &:focus {
+        background: $colorErrorHover;
+        border: 1px solid $colorErrorHover;
+      }
+    }
+
+    &.ant-btn-disabled, &:disabled {
+      @extend .buttonDisable
+    }
   }
 }
 

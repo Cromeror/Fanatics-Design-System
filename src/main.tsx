@@ -22,7 +22,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Logotype type='reversed'/>
         </Space>
         <Space>
-          <Button type='primary'>Primary Button</Button>
+          <Button type='primary' >Primary Button</Button>
+          <Button type='primary' danger>Primary Button</Button>
           <Button type='secondary'>Secondary Button</Button>
           <Button type='text'>Text Button</Button>
           <Button type='link'>Link Button</Button>

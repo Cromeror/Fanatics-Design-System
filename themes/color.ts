@@ -24,7 +24,6 @@ export const Color = {
   colorPrimaryTextActive: "#031329",
 
   //Secondary
-
   colorSecondaryBg: "#E6E9EC",
   colorSecondaryBgHover: "#CED2D9",
   colorSecondaryBorder: "#9DA5B3",
@@ -57,9 +56,9 @@ export const Color = {
   colorIcon: "#25292F 0.45",
   colorIconHover: "#25292F 0.88",
 
-  //BackGrounds
+  //Backgrounds
   colorBgContainer: "#ffffff",
-  colorBgContainerDisabled: "#0000000a",
+  colorBgContainerDisabled: "#25292f0a",
   colorBgLayout: "#f5f5f5",
   colorBgElevated: "#ffffff",
   controlItemBgHover: "#0000000a",

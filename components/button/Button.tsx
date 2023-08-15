@@ -5,7 +5,7 @@ import stylesButton from "./button.module.scss"
 export const buttonTheme = {
   token: {
     //primary
-    colorPrimaryActive: "yellow",//color.colorPrimaryActive,
+    //colorPrimaryActive: "yellow",//color.colorPrimaryActive,
     colorBgContainerDisabled: "rgba(37, 41, 47, 0.04)", //le puse ese que es el que esta en el figma pero no esta correcto parece
     colorPrimaryHover: Color.colorInfoHover,
     colorPrimaryTextHover: "red",
@@ -59,17 +59,16 @@ export interface ButtonProps {
   danger?: boolean;
 }
 
-export const Button = ({children, size = "default", type = "primary", ...otherProps}: ButtonProps) => {
+export const Button = ({size = "default", type = "primary", danger, ...otherProps}: ButtonProps) => {
   return (
     <ConfigProvider theme={buttonTheme}>
       <AntdButton
-        className={BUTTON_CLASSNAME_MAP[type]}
+        className={!!danger ? stylesButton.primaryButtonDanger : BUTTON_CLASSNAME_MAP[type]}
         size={BUTTON_SIZE_MAP[size]}
         type={BUTTON_TYPE[type]}
+        danger={danger}
         {...otherProps}
-      >
-        {children}
-      </AntdButton>
+      />
     </ConfigProvider>
   );
 };
