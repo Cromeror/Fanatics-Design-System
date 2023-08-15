@@ -2,14 +2,140 @@
 
 .primaryButton {
   &:not(:disabled):not(.ant-btn-disabled):hover {
-    background-color: #ffffff;
-    color: $colorErrorHover;
+    background-color: $colorPrimaryHover;
+    color: $colorBackground;
+  }
+
+  &:not(:disabled):not(.ant-btn-disabled):active {
+    background-color: $colorInfoActive;
+    color: $colorPrimary;
+    border: 5px solid $blue10;
+  }
+
+  &:not(:disabled):not(.ant-btn-disabled):focus {
+    background-color: $colorInfoBase;
+    color: $colorBackground;
+    border: 3px solid $colorInfoActive;
+  }
+
+  &.ant-btn-disabled,
+  &.primaryButton:disabled {
+    background-color: $colorSecondaryBg;
+    color: $colorSecondaryBgHover;
+    border: 1px solid $colorSecondaryBgHover;
+  }
+
+
+  //Danger
+  &.danger.textDarkButton:not(:disabled):not(.ant-btn-disabled):hover {
+    background-color: $colorErrorBorderHover;
+    color: $colorBackground;
+  }
+
+  &.danger.textDarkButton:not(:disabled):not(.ant-btn-disabled):active {
+    background-color: $colorErrorActive;
+    color: $colorBackground;
+  }
+
+  &.danger.textDarkButton:not(:disabled):not(.ant-btn-disabled):focus {
+    background-color: $colorErrorBorderHover;
+    color: $colorBackground;
+    border: 1px solid $colorErrorBorderHover;
   }
 }
 
 .secondaryButton {
+  border: 1px solid $controlItemBgHover;
+  color: black;
+
   &:not(:disabled):not(.ant-btn-disabled):hover {
-    background-color: $red10;
-    color: $colorErrorTextHover;
+    color: $colorPrimaryHover;
   }
+  &:not(:disabled):not(.ant-btn-disabled):active {
+    color: $colorInfoActive;
+    border: 1px solid $colorInfoActive;
+  }
+
+  &:not(:disabled):not(.ant-btn-disabled):focus {
+    color: black;
+    border: 2px solid $colorPrimaryHover;
+  }
+
+  &.ant-btn-disabled,
+  &.primaryButton:disabled {
+    background-color: $colorSecondaryBg;
+    color: $colorSecondaryBgHover;
+    border: 1px solid $colorSecondaryBgHover;
+  }
+}
+
+.textButton {
+  &:not(:disabled):not(.ant-btn-disabled):hover {
+    background-color: $colorBgLayout;
+  }
+  &:not(:disabled):not(.ant-btn-disabled):active {
+    background-color: $colorTextHeading;
+  }
+
+  &:not(:disabled):not(.ant-btn-disabled):focus {
+    color: $colorTextHeading;
+    border: 2px solid $colorTextHeading;
+  }
+
+  &.ant-btn-disabled,
+  &.primaryButton:disabled {
+    background-color: $colorSecondaryBg;
+    color: $colorSecondaryBgHover;
+    border: 0px;
+  }
+}
+
+.linkButton {
+  color: $colorInfoBase;
+  border: 0px;
+
+  &:not(:disabled):not(.ant-btn-disabled):hover {
+    color: $colorInfoHover;
+  }
+  &:not(:disabled):not(.ant-btn-disabled):active {
+    color: $colorInfoActive;
+  }
+
+  &:not(:disabled):not(.ant-btn-disabled):focus {
+    color: $colorInfoBase;
+    border: 2px solid $colorInfoBase;
+  }
+
+  &.ant-btn-disabled,
+  &.primaryButton:disabled {
+    background-color: $colorSecondaryBg;
+    color: $colorSecondaryBgHover;
+    border: 0px;
+  }
+}
+
+.textDarkButton {
+  background: $colorSecondary;
+  color: $colorSecondaryBg
+  ;
+  &:not(:disabled):not(.ant-btn-disabled):hover {
+    background-color: $colorSecondaryBase;
+    color: $colorBgContainer;
+  }
+  &:not(:disabled):not(.ant-btn-disabled):active {
+    background-color: $colorInfoBase;
+  }
+
+  &:not(:disabled):not(.ant-btn-disabled):focus {
+    background-color: $colorSecondary;
+    color: $colorBackground;
+    border: 2px solid $colorBgContainer;
+  }
+
+  &.ant-btn-disabled,
+  &.primaryButton:disabled {
+    background-color: $colorSecondaryHover;
+    color: $colorSecondaryBgHover;
+  }
+
 }
