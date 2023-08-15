@@ -25,8 +25,6 @@
     border: 1px solid $colorSecondaryBgHover;
   }
 
-
-  //Danger
   &.danger.textDarkButton:not(:disabled):not(.ant-btn-disabled):hover {
     background-color: $colorErrorBorderHover;
     color: $colorBackground;
@@ -51,6 +49,7 @@
   &:not(:disabled):not(.ant-btn-disabled):hover {
     color: $colorPrimaryHover;
   }
+
   &:not(:disabled):not(.ant-btn-disabled):active {
     color: $colorInfoActive;
     border: 1px solid $colorInfoActive;
@@ -73,6 +72,7 @@
   &:not(:disabled):not(.ant-btn-disabled):hover {
     background-color: $colorBgLayout;
   }
+
   &:not(:disabled):not(.ant-btn-disabled):active {
     background-color: $colorTextHeading;
   }
@@ -97,6 +97,7 @@
   &:not(:disabled):not(.ant-btn-disabled):hover {
     color: $colorInfoHover;
   }
+
   &:not(:disabled):not(.ant-btn-disabled):active {
     color: $colorInfoActive;
   }
@@ -116,12 +117,13 @@
 
 .textDarkButton {
   background: $colorSecondary;
-  color: $colorSecondaryBg
-  ;
+  color: $colorSecondaryBg;
+
   &:not(:disabled):not(.ant-btn-disabled):hover {
     background-color: $colorSecondaryBase;
     color: $colorBgContainer;
   }
+
   &:not(:disabled):not(.ant-btn-disabled):active {
     background-color: $colorInfoBase;
   }
