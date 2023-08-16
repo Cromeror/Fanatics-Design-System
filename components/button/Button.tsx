@@ -49,21 +49,30 @@ const BUTTON_CLASSNAME_MAP = {
   secondary: stylesButton.secondaryButton,
   link: stylesButton.linkButton,
   text: stylesButton.textButton,
-  "text-dark": stylesButton.textDarkButton
+  "textDark": stylesButton.textDarkButton
+}
+
+const BUTTON_DANGER_CLASSNAME_MAP = {
+  primary: stylesButton.primaryButtonDanger,
+  secondary: stylesButton.secondaryButtonDanger,
+  link: stylesButton.linkButtonDanger,
+  text: stylesButton.textButtonDanger,
+  "textDark": stylesButton.textDarkButtonDanger
 }
 
 export interface ButtonProps {
-  type?: "primary" | "secondary" | "link" | "text" | "text-dark";
+  type?: "primary" | "secondary" | "link" | "text" | "textDark";
   size?: 'small' | 'default' | 'large';
   disabled?: boolean;
   danger?: boolean;
 }
 
 export const Button = ({size = "default", type = "primary", danger, ...otherProps}: ButtonProps) => {
+
   return (
     <ConfigProvider theme={buttonTheme}>
       <AntdButton
-        className={!!danger ? stylesButton.primaryButtonDanger : BUTTON_CLASSNAME_MAP[type]}
+        className={!!danger ? BUTTON_DANGER_CLASSNAME_MAP[type] : BUTTON_CLASSNAME_MAP[type]}
         size={BUTTON_SIZE_MAP[size]}
         type={BUTTON_TYPE[type]}
         danger={danger}

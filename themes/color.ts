@@ -47,12 +47,23 @@ export const Color = {
   colorTertiaryText: "#5C1812",
   colorTertiaryTextActive: "#2E0C09",
 
-  //Text & Icons
-  colorText: "#25292F 0.88",
+  //Text
+  colorText: "#25292FE0", //88%
   colorTextHeading: "#25292F",
   colorTextDescription: "#25292F 0.45",
   colorTextPlaceholder: "#25292F 0.25",
   colorTextDisabled: "#25292F 0.25",
+  colorTextSecondary: "#25292F 0.65",
+  colorTextTertiary: "#25292F 0.45",
+  colorTextQuaternary: "#25292F 0.25",
+  colorTextLabel: "#25292F 0.65",
+  colorBgTextHover: "#25292F0F", //6%
+  colorBgTextPress: "#25292F26", //15%
+  colorTextLightSolid: "#FFFFFF ",
+  colorItemText: "#FFFFFFA6",
+
+
+  //Icons
   colorIcon: "#25292F 0.45",
   colorIconHover: "#25292F 0.88",
 
@@ -64,9 +75,16 @@ export const Color = {
   controlItemBgHover: "#0000000a",
   controlItemBgActive: "#e6f4ff",
   controlItemBgActiveHover: "#bae0ff",
+  controlItemBgActiveDisabled: "#000000 0.15",
+  colorBgMask: "#bae0ff",
+  segmentedBgColorSelected: "#bae0ff",
+  segmentedGroupBg: "#bae0ff",
+  tooltipBg: "#bae0ff",
+  colorMenuDarkBg: "#bae0ff",
+  colorMenuSubItemBg: "#bae0ff",
 
   //Border y Drivers
-  colorBorder: "#25292F 0.16",
+  colorBorder: "#25292F29",//16%
   colorBorderSecondary: "#25292F 0.08",
   colorSplit: "#25292F 0.06",
 

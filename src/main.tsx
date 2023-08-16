@@ -25,8 +25,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Button type='primary' >Primary Button</Button>
           <Button type='primary' danger>Primary Button</Button>
           <Button type='secondary'>Secondary Button</Button>
+          <Button type='secondary' danger>Secondary Button</Button>
           <Button type='text'>Text Button</Button>
+          <Button type='text' danger>Text Button</Button>
           <Button type='link'>Link Button</Button>
+          <Button type='link' danger>Link Button</Button>
           <Button type='textDark'>Text Dark Button</Button>
         </Space>
       </Space>
