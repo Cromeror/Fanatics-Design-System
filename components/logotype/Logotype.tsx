@@ -8,3 +8,5 @@ interface LogotypeProps {
 export const Logotype = ({type = "primary"}: LogotypeProps) => (
   <img src={type === "primary" ? logoTypePrimary : logoTypeReversed} alt="fanatic"/>
 )
+
+export default Logotype;
