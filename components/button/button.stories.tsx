@@ -40,30 +40,214 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const PrimarySmall: Story = {
   args: {
     type: "primary",
-    children: "Primary Button",
+    children: "Button",
+    size: "small",
+  },
+};
+export const PrimaryDefault: Story = {
+  args: {
+    type: "primary",
+    children: "Button",
+  },
+};
+export const PrimaryLarge: Story = {
+  args: {
+    type: "primary",
+    children: "Button",
+    size: "large",
   },
 };
 
-export const Secondary: Story = {
+export const PrimarySmallDanger: Story = {
+  args: {
+    type: "primary",
+    children: "Button",
+    size: "small",
+    danger: true,
+  },
+};
+export const PrimaryDefaultDanger: Story = {
+  args: {
+    type: "primary",
+    children: "Button",
+    danger: true,
+  },
+};
+export const PrimaryLargeDanger: Story = {
+  args: {
+    type: "primary",
+    children: "Button",
+    size: "large",
+    danger: true,
+  },
+};
+
+export const SecondarySmall: Story = {
+  args: {
+    type: "secondary",
+    children: "Button",
+    size: "small",
+  },
+};
+export const SecondaryDefault: Story = {
   args: {
     type: "secondary",
     children: "Button",
   },
 };
-
-export const Text: Story = {
+export const SecondaryLarge: Story = {
   args: {
-    type: "text",
+    type: "secondary",
     children: "Button",
+    size: "large",
+  },
+};
+export const SecondarySmallDanger: Story = {
+  args: {
+    type: "secondary",
+    children: "Button",
+    size: "small",
+    danger: true,
+  },
+};
+export const SecondaryDefaultDanger: Story = {
+  args: {
+    type: "secondary",
+    children: "Button",
+    danger: true
+  },
+};
+export const SecondaryLargeLarge: Story = {
+  args: {
+    type: "secondary",
+    children: "Button",
+    size: "large",
+    danger: true,
   },
 };
 
-export const Link: Story = {
+export const TextSmall: Story = {
+  args: {
+    type: "text",
+    children: "Button",
+    size: "small",
+  },
+};
+export const TextDefault: Story = {
+  args: {
+    type: "text",
+    children: "Button",
+
+  },
+};
+
+export const TextLarge: Story = {
+  args: {
+    type: "text",
+    children: "Button",
+    size: "large",
+
+  },
+};
+
+export const TextSmallDanger: Story = {
+  args: {
+    type: "text",
+    children: "Button",
+    size: "small",
+    danger:true
+
+  },
+};
+
+export const TextDefaultDanger: Story = {
+  args: {
+    type: "text",
+    children: "Button",
+   danger: true,
+  },
+};
+
+export const TextLargeDanger: Story = {
+  args: {
+    type: "text",
+    children: "Button",
+    size: "large",
+    danger: true,
+  },
+};
+
+
+export const LinkSmall: Story = {
+  args: {
+    type: "link",
+    children: "Button",
+    size: "small",
+  },
+};
+
+export const LinkDefault: Story = {
   args: {
     type: "link",
     children: "Button",
   },
 };
+export const LinkLarge: Story = {
+  args: {
+    type: "link",
+    children: "Button",
+    size: "large",
+  },
+};
+
+export const LinkSmallDanger: Story = {
+  args: {
+    type: "link",
+    children: "Button",
+    size: "small",
+    danger: true,
+  },
+};
+export const LinkDefaultDanger: Story = {
+  args: {
+    type: "link",
+    children: "Button",
+    danger: true,
+  },
+};
+export const LinkLargeDanger: Story = {
+  args: {
+    type: "link",
+    children: "Button",
+    size: "large",
+    danger: true,
+  },
+};
+
+export const TextDarkSmall: Story = {
+  args: {
+    type: "textDark",
+    children: "Button",
+    size: "small",
+  },
+};
+export const TextDarkDefault: Story = {
+  args: {
+    type: "textDark",
+    children: "Button",
+
+  },
+};
+export const TextDarkLarge: Story = {
+  args: {
+    type: "textDark",
+    children: "Button",
+    size: "large",
+
+  },
+};
+
+
