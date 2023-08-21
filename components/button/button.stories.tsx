@@ -7,7 +7,7 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     type: {
-      options: ["primary", "secondary", "text", "link"],
+      options: ["primary", "secondary", "text", "link", "textDark"],
       control: {
         type: "select",
       },
@@ -17,10 +17,6 @@ const meta = {
     disabled: {
       description: "Disabled state of button",
       table: {defaultValue: {summary: false}},
-    },
-    href: {
-      description: "Redirect url of link button",
-      table: {defaultValue: {summary: ""}},
     },
     size: {
       options: ["small", "default", "large"],

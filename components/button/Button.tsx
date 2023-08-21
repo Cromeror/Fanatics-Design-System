@@ -1,8 +1,5 @@
 import {Button as AntdButton, ConfigProvider} from "antd";
-import {Color} from '../../themes/color'
 import stylesButton from "./button.module.scss"
-
-
 
 const BUTTON_TYPE = {
   primary: 'primary',
@@ -31,7 +28,7 @@ const BUTTON_DANGER_CLASSNAME_MAP = {
   secondary: stylesButton.secondaryButtonDanger,
   link: stylesButton.linkButtonDanger,
   text: stylesButton.textButtonDanger,
-  "textDark": stylesButton.textDarkButtonDanger
+  "textDark": stylesButton.primaryButtonDanger //Danger it's not defined for button text dark
 }
 
 export interface ButtonProps {
@@ -41,19 +38,23 @@ export interface ButtonProps {
   danger?: boolean;
 }
 
-export const Button = ({size = "default", type = "primary", danger, ...otherProps}: ButtonProps) => {
+export const customTheme = {
+  token: {
+    borderRadius: "4px",
+    borderRadiusLG: "8px",
+    lineHeight: 1,
+  }
+}
 
-  return (
-    <ConfigProvider>
-      <AntdButton
-        className={`${!!danger ? BUTTON_DANGER_CLASSNAME_MAP[type] : BUTTON_CLASSNAME_MAP[type]} ${size===BUTTON_SIZE_MAP.large ? stylesButton.large :  stylesButton.small}` }
-        size={BUTTON_SIZE_MAP[size]}
-        type={BUTTON_TYPE[type]}
-        danger={danger}
-        {...otherProps}
-      />
-    </ConfigProvider>
-  );
-};
+export const Button = ({size = "default", type = "primary", danger, ...otherProps}: ButtonProps) => (
+  <ConfigProvider theme={customTheme}>
+    <AntdButton
+      className={`${!!danger ? BUTTON_DANGER_CLASSNAME_MAP[type] : BUTTON_CLASSNAME_MAP[type]}`}
+      size={BUTTON_SIZE_MAP[size]}
+      type={BUTTON_TYPE[type]}
+      danger={danger}
+      {...otherProps}
+    />
+  </ConfigProvider>);
 
 export default Button;
