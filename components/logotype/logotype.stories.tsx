@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Logotype } from "./Logotype";
 
 const meta = {
-  title: "Logotype",
+  title: "Atoms/Logotype",
   component: Logotype,
   tags: ["autodocs"]
 } satisfies Meta<typeof Logotype>;
