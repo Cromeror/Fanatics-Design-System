@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Table } from "antd";
+import { Table, ConfigProvider } from "antd";
 import type { ColumnsType } from 'antd/es/table';
 import stylesButton from "../button/button.module.scss";
 
@@ -48,8 +48,19 @@ const styles = {
   backgroundColor: "red"
 }
 
+export const custonTheme = {
+  token: {
+    colorBgContainer: "#F5F6F8",
+  }
+
+}
+
 export const HeaderItem = ({ children, size = "middle" }: HeaderItemProps) => {
-  return <Table columns={columns} dataSource={[]} size={size} />;
+  return (
+    <ConfigProvider theme={custonTheme}>
+      <Table columns={columns} dataSource={[]} size={size} />
+    </ConfigProvider>
+    );
 }
 
 export default HeaderItem;

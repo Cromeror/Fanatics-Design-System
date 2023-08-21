@@ -24,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </Space>
         <Space>
           <Button type='primary' >Primary Button</Button>
+          <Button type='primary' size='small'>Primary Button</Button>
           <Button type='primary' size='large'>Primary Button</Button>
           <Button type='primary' danger>Primary Button</Button>
           <Button type='secondary'>Secondary Button</Button>

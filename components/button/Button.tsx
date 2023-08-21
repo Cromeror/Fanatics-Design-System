@@ -41,12 +41,21 @@ export interface ButtonProps {
   danger?: boolean;
 }
 
+export const custonTheme = {
+  token: {
+    borderRadius: "4px",
+    borderRadiusSM: "4px",
+    borderRadiusLG: "8px",
+  }
+
+}
+
 export const Button = ({size = "default", type = "primary", danger, ...otherProps}: ButtonProps) => {
 
   return (
-    <ConfigProvider>
+    <ConfigProvider theme={custonTheme}>
       <AntdButton
-        className={`${!!danger ? BUTTON_DANGER_CLASSNAME_MAP[type] : BUTTON_CLASSNAME_MAP[type]} ${size===BUTTON_SIZE_MAP.large ? stylesButton.large :  stylesButton.small}` }
+        className={`${!!danger ? BUTTON_DANGER_CLASSNAME_MAP[type] : BUTTON_CLASSNAME_MAP[type]}` }
         size={BUTTON_SIZE_MAP[size]}
         type={BUTTON_TYPE[type]}
         danger={danger}

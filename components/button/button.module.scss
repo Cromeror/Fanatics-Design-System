@@ -7,20 +7,6 @@
   background: $colorBgContainerDisabled;
 }
 
-/* Clase para tamaño grande */
-.large {
-  &.ant-btn.ant-btn-lg {
-    border-radius: 19px;
-  }
-}
-
-/* Clase para tamaño pequeño */
-.small, .default {
-  &.ant-btn-sm {
-    border-radius: 4px;
-  }
-}
-
 .primaryButton {
   //border-radius: ; TODO: esta pendiente por token
   border: 1px solid $colorPrimary;
