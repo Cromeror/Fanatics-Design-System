@@ -4,7 +4,7 @@ import {Heading} from "./Heading";
 import {Title} from "./Title";
 
 const meta = {
-  title: "Typography",
+  title: "Atoms/Typography",
   component: BodyText,
   tags: ["autodocs"],
   argTypes: {

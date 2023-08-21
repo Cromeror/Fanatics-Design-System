@@ -2,10 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 import {Color} from '../../themes/color';
 
-
-
 const meta = {
-  title: "Color",
+  title: "Atoms/Color",
   component: React.Component,
   tags: ["autodocs"]
 } satisfies Meta<typeof React.Component>;
