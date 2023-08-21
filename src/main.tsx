@@ -7,6 +7,7 @@ import {Button} from "../components/button/Button";
 import {Logotype} from "../components/logotype/Logotype"
 import {ConfigProvider, Space, Typography} from "antd";
 import {lightTheme} from "../themes/light-theme";
+import {HeaderItem} from "../components/table/HeaderItem"
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </Space>
         <Space>
           <Button type='primary' >Primary Button</Button>
+          <Button type='primary' size='large'>Primary Button</Button>
           <Button type='primary' danger>Primary Button</Button>
           <Button type='secondary'>Secondary Button</Button>
           <Button type='secondary' danger>Secondary Button</Button>
@@ -31,6 +33,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Button type='link'>Link Button</Button>
           <Button type='link' danger>Link Button</Button>
           <Button type='textDark'>Text Dark Button</Button>
+        </Space>
+        <Space>
+          <HeaderItem></HeaderItem>
         </Space>
       </Space>
     </ConfigProvider>
