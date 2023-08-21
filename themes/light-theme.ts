@@ -1,7 +1,9 @@
-import {color} from './color'
+import {Color} from './color'
+import {SizeSpace} from "./size-space";
+import {borderRadius} from './borderRadius';
+import {shadows} from './shadows';
 export const lightTheme = {
   token: {
-
     // Headings
     "lineHeightHeading-extraLarge": "48px",
     "lineHeightHeading-large": "40px",
@@ -46,6 +48,9 @@ export const lightTheme = {
     "lineHeightBodyText-small": "20px",
     "lineHeightBodyText-extraSmall": "18px",
 
-    ...color
+    ...Color,
+    ...SizeSpace,
+    ...borderRadius,
+    ...shadows
   }
 }

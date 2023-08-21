@@ -1,14 +1,42 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import {Heading} from "../components/typography/Heading";
-import {ConfigProvider, Typography} from "antd";
+import {Title} from "../components/typography/Title";
+import {BodyText} from "../components/typography/BodyText";
+import {Button} from "../components/button/Button";
+import {Logotype} from "../components/logotype/Logotype"
+import {ConfigProvider, Space, Typography} from "antd";
 import {lightTheme} from "../themes/light-theme";
+import {HeaderItem} from "../components/table/HeaderItem"
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ConfigProvider theme={lightTheme}>
-      <Heading>Table cell text</Heading>
-      <Heading as={Typography.Text}>Table cell text</Heading>
-      <Heading as={Typography.Link}>Table cell text</Heading>
+      <Space direction="vertical">
+        <Space>
+          <Heading as={Typography.Title}>Table cell text</Heading>
+          <Title as={Typography.Text}>Table cell text</Title>
+          <BodyText underline={true}>Table cell text</BodyText>
+        </Space>
+        <Space>
+          <Logotype type='primary'/>
+          <Logotype type='reversed'/>
+        </Space>
+        <Space>
+          <Button type='primary' >Primary Button</Button>
+          <Button type='primary' size='large'>Primary Button</Button>
+          <Button type='primary' danger>Primary Button</Button>
+          <Button type='secondary'>Secondary Button</Button>
+          <Button type='secondary' danger>Secondary Button</Button>
+          <Button type='text'>Text Button</Button>
+          <Button type='text' danger>Text Button</Button>
+          <Button type='link'>Link Button</Button>
+          <Button type='link' danger>Link Button</Button>
+          <Button type='textDark'>Text Dark Button</Button>
+        </Space>
+        <Space>
+          <HeaderItem></HeaderItem>
+        </Space>
+      </Space>
     </ConfigProvider>
   </React.StrictMode>)

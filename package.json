@@ -2,7 +2,6 @@
   "name": "@brands-services/react-component-lib",
   "version": "0.1.0",
   "description": "React component library to produce a unified look for all internal application",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,6 +9,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "antd2scss": "tsc --project themes/tsconfig.scss.json && node themes/dist",
     "chromatic": "npx chromatic --project-token=chpt_47592768fec0972"
   },
   "dependencies": {
@@ -37,6 +37,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.13",
+    "less": "^4.2.0",
     "storybook": "7.2.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
