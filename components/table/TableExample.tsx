@@ -11,7 +11,7 @@ interface DataType {
   filter?: string;
 }
 
-const columns = [
+const customColumns = [
   {
     title: 'Table header1',
     dataIndex: 'tableHeader1',
@@ -66,7 +66,7 @@ const TableHeader = ({children, ...props}) => {
   )
 }
 
-export const TableExample = ({size = "middle"}: HeaderItemProps) => {
+export const TableExample = ({size = "middle", columns=customColumns}: HeaderItemProps) => {
   return (
     <ConfigProvider theme={custonTheme}>
       <Table columns={columns} dataSource={[]} size={size} components={{
