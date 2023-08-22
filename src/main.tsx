@@ -7,7 +7,7 @@ import {Button} from "../components/button/Button";
 import {Logotype} from "../components/logotype/Logotype"
 import {ConfigProvider, Space, Typography} from "antd";
 import {lightTheme} from "../themes/light-theme";
-import {HeaderItem} from "../components/table/HeaderItem"
+import {TableExample} from "../components/table/TableExample"
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -36,7 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Button type='textDark'>Text Dark Button</Button>
         </Space>
         <Space>
-          <HeaderItem></HeaderItem>
+          <TableExample></TableExample>
         </Space>
       </Space>
     </ConfigProvider>
