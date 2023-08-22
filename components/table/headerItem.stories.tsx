@@ -1,30 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TableExample } from "./TableExample";
+import { HeaderItem } from "./HeaderItem";
 
 const meta = {
-  title: "Atoms/Table",
-  component: TableExample,
+  title: "Atoms/HeaderItem",
+  component: HeaderItem,
   tags: ["autodocs"]
-} satisfies Meta<typeof TableExample>;
+} satisfies Meta<typeof HeaderItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const columnExample = {
-
-};
-
-const defaultColumns: ColumnsType<DataType> = [
-  {
-    title: 'Table header1',
-    dataIndex: 'tableHeader1',
-    key: 'tableHeader1',
-  }
-];
-
 export const Default: Story = {
   args: {
-    columns: defaultColumns
+    title: "Table header",
+    sorter: ()=>{}
   },
 };
-

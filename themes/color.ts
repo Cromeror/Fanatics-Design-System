@@ -48,18 +48,18 @@ export const Color = {
   colorTertiaryTextActive: "#2E0C09",
 
   //Text
-  colorText: "#25292FE0", //88%
+  colorText: "#25292FE0",
   colorTextHeading: "#25292F",
-  colorTextDescription: "#25292F 0.45",
-  colorTextPlaceholder: "#25292F 0.25",
-  colorTextDisabled: "#25292F 0.25",
-  colorTextSecondary: "#25292F 0.65",
-  colorTextTertiary: "#25292F 0.45",
-  colorTextQuaternary: "#25292F 0.25",
-  colorTextLabel: "#25292F 0.65",
-  colorBgTextHover: "#25292F0F", //6%
-  colorBgTextPress: "#25292F26", //15%
-  colorTextLightSolid: "#FFFFFF ",
+  colorTextDescription: "#25292f73",
+  colorTextPlaceholder: "#25292f40",
+  colorTextDisabled: "#25292f40",
+  colorTextSecondary: "#25292fa6",
+  colorTextTertiary: "#25292f73",
+  colorTextQuaternary: "#25292f40",
+  colorTextLabel: "#25292fa6",
+  colorBgTextHover: "#25292F0F",
+  colorBgTextPress: "#25292F26",
+  colorTextLightSolid: "#FFFFFF",
   colorItemText: "#FFFFFFA6",
 
 
@@ -70,7 +70,7 @@ export const Color = {
   //Backgrounds
   colorBgContainer: "#ffffff",
   colorBgContainerDisabled: "#25292f0a",
-  colorBgLayout: "#f5f5f5",
+  colorBgLayout: "#F5F6F8",
   colorBgElevated: "#ffffff",
   controlItemBgHover: "#0000000a",
   controlItemBgActive: "#e6f4ff",

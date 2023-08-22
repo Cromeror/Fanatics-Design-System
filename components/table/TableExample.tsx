@@ -1,31 +1,21 @@
 import {ReactElement} from "react";
 import {ConfigProvider, Table} from "antd";
-import styles from "./TableHeader.module.css"
-
-
-interface DataType {
-  key: string;
-  tableHeader1: string;
-  tableHeader2: string;
-  sort?: string;
-  filter?: string;
-}
+import {HeaderItem} from "./HeaderItem";
 
 const customColumns = [
   {
     title: 'Table header1',
     dataIndex: 'tableHeader1',
     key: 'tableHeader1',
-    sorter: (a, b) => a.sort.localeCompare(b.sort),
+    sorter: (a, b) => {
+      debugger;
+      return a.sort.localeCompare(b.sort)
+    },
     filters: [
       {text: 'Filter 1', value: 'filter1'},
       {text: 'Filter 2', value: 'filter2'},
     ], // Opciones de filtro
-    onFilter: (value, record) => record.filter.includes(value),
-    onHeaderCell: (column)=>{
-      console.log("column", column)
-      return column
-    }
+    onFilter: (value, record) => record.filter.includes(value)
   },
   {
     title: 'Table header2',
@@ -34,18 +24,94 @@ const customColumns = [
   }
 ];
 
-export const HEADER_ITEM_TYPES = {
-  default: "default",
-  bulkImput: "bulkImput",
-  bulkSelect: "bulkSelect",
-}
+
+const columnsExample = [
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    filters: [
+      {
+        text: 'Joe',
+        value: 'Joe',
+      },
+      {
+        text: 'Jim',
+        value: 'Jim',
+      },
+      {
+        text: 'Submenu',
+        value: 'Submenu',
+        children: [
+          {
+            text: 'Green',
+            value: 'Green',
+          },
+          {
+            text: 'Black',
+            value: 'Black',
+          },
+        ],
+      },
+    ],
+    // specify the condition of filtering result
+    // here is that finding the name started with `value`
+    onFilter: (value: string, record) => record.name.indexOf(value) === 0,
+    sorter: (a, b) => a.name.length - b.name.length,
+    sortDirections: ['descend'],
+  },
+  {
+    title: 'Age',
+    dataIndex: 'age',
+    defaultSortOrder: 'descend',
+    sorter: (a, b) => a.age - b.age,
+  },
+  {
+    title: 'Address',
+    dataIndex: 'address',
+    filters: [
+      {
+        text: 'London',
+        value: 'London',
+      },
+      {
+        text: 'New York',
+        value: 'New York',
+      },
+    ],
+    onFilter: (value: string, record) => record.address.indexOf(value) === 0,
+  },
+];
+
+const data = [
+  {
+    key: '1',
+    name: 'John Brown',
+    age: 32,
+    address: 'New York No. 1 Lake Park',
+    tags: ['nice', 'developer'],
+  },
+  {
+    key: '2',
+    name: 'Jim Green',
+    age: 42,
+    address: 'London No. 1 Lake Park',
+    tags: ['loser'],
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sydney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
+];
 
 interface HeaderItemProps {
   children: ReactElement;
   size?: "small" | "middle" | "large";
 }
 
-export const custonTheme = {
+export const customTheme = {
   token: {
     colorBgContainer: "#F5F6F8",
   }
@@ -53,29 +119,41 @@ export const custonTheme = {
 
 const TableHeaderRow = ({children}) => {
   return (
-    <tr >
+    <tr>
       {children}
     </tr>
   )
 }
 
-const TableHeader = ({children, ...props}) => {
-  console.log(props)
-  return (
-    <th className={styles.tableRow}>{children}</th>
-  )
-}
+//TODO: como pasar el metodo onfilter para filtrar la tabla
 
-export const TableExample = ({size = "middle", columns=customColumns}: HeaderItemProps) => {
+export const TableExample = ({size = "middle", columns = columnsExample}: HeaderItemProps) => {
+  const columnsConfig = columns.map(({title, sorter, ...props}) => {
+    console.log("---->", props)
+    return {
+      ...props,
+      onHeaderCell: (column) => {
+        console.log("COLUMN", column)
+        return {title, sorter}
+      }
+    }
+  })
+
   return (
-    <ConfigProvider theme={custonTheme}>
-      <Table columns={columns} dataSource={[]} size={size} components={{
-        header: {
-          wrapper: ({children})=>(<thead>{children}</thead>),
-          cell: TableHeader,
-          row: TableHeaderRow
-        }
-      }}/>
+    <ConfigProvider theme={customTheme}>
+      <Table columns={columnsConfig} dataSource={data}
+             onChange={(pagination, filters, sorter) => {
+               // Agregar tu lógica de manejo de ordenación aquí
+               console.log('Table sorted:', sorter);
+             }}
+
+             components={{
+               header: {
+                 wrapper: ({children}) => (<thead>{children}</thead>),
+                 cell: HeaderItem,
+                 row: TableHeaderRow
+               }
+             }}/>
     </ConfigProvider>
   );
 }
