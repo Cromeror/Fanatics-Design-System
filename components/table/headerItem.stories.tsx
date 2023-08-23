@@ -29,6 +29,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    title: "Table header"
+  },
+};
+
+export const DefaultSorter: Story = {
+  args: {
     title: "Table header",
     sorter: () => false
   },
@@ -45,5 +51,38 @@ export const ShowFilters: Story = {
   args: {
     title: "Table header",
     filters: true
+  },
+};
+
+export const ShowSorterFilter: Story = {
+  args: {
+    title: "Table header",
+    sorter: () => false,
+    filters: true,
+  },
+};
+
+export const ShowSorterSearch: Story = {
+  args: {
+    title: "Table header",
+    sorter: () => false,
+    search: true
+  },
+};
+
+export const ShowFilterSearch: Story = {
+  args: {
+    title: "Table header",
+    filters: true,
+    search: true
+  },
+};
+
+export const ShowSorterFilterSearch: Story = {
+  args: {
+    title: "Table header",
+    sorter: () => false,
+    filters: true,
+    search: true
   },
 };
