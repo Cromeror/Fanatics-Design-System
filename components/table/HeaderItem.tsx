@@ -21,14 +21,14 @@ const SorterComponent = () => {
   )
 }
 
-export const HeaderItem = ({title, sorter, ...props}: HeaderItemProps) => {
+export const HeaderItem = ({title, sorter, filters, search}: HeaderItemProps) => {
   return (
     <th className={styles.headerItem}>
       <div className={styles.headerItem__titleSection}>
         <BodyText size={"small"}>{title}</BodyText>
         {sorter && <SorterComponent/>}
-        <FilterFilled/>
-        <SearchOutlined/>
+        {filters && <FilterFilled/>}
+        {search && <SearchOutlined/>}
       </div>
     </th>
   )
