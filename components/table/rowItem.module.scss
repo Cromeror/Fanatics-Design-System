@@ -1,5 +1,6 @@
 .rowItem {
   background-color: #FFF;
+
   &:hover{
     background-color: #BAE0FF;
   }
@@ -7,6 +8,14 @@
 }
 .rowItemCell {
   border-bottom: 1px solid #00000014;
+  display: inline-flex;
+  height: 48px;
+  min-height: 40px;
+  max-height: 68px;
+  padding: var(--padding-padding-small, 8px);
+  align-items: center;
+  gap: var(--margin-margin-small, 8px);
+  flex-shrink: 0;
 }
 .selected {
   background-color: #E6F4FF;

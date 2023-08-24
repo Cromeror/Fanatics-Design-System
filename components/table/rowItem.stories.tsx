@@ -25,6 +25,14 @@ export const Default: Story = {
   },
 };
 
+export const DefaultSelected: Story = {
+  args: {
+    children: "Default Row Content",
+    selected: true,
+  },
+};
+
+
 export const WithAntDTag: Story = {
   args: {
     children: (
