@@ -1,11 +1,10 @@
 import Checkbox from "../checkbox";
 import Radio from "../radio";
 import React from "react";
-import classNames from "classnames";
-import styles from "./headerControl.module.scss";
+import styles from "./control.module.scss";
 import { DownOutlined } from "@ant-design/icons";
 
-export interface HeaderControlProps {
+export interface ControlProps {
   type?:
     | "checkbox"
     | "dropdown"
@@ -16,14 +15,9 @@ export interface HeaderControlProps {
     | "collapse";
 }
 
-export const HeaderControl = ({ type = "empty" }: HeaderControlProps) => {
+export const Control = ({ type = "empty" }: ControlProps) => {
   return (
-    <div
-      className={classNames(
-        styles.container,
-        type === "dropdown" && styles.containerDropdown
-      )}
-    >
+    <>
       {type === "radio" && <Radio />}
       {type === "dropdown" && (
         <>
@@ -34,8 +28,8 @@ export const HeaderControl = ({ type = "empty" }: HeaderControlProps) => {
       {type !== "radio" && type !== "empty" && type != "dropdown" && (
         <Checkbox />
       )}
-    </div>
+    </>
   );
 };
 
-export default HeaderControl;
+export default Control;

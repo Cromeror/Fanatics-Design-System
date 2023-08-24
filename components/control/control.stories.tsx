@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HeaderControl } from "./HeaderControl";
+import { Control } from "./Control";
 
 const meta = {
-  title: "Atoms/HeaderControl",
-  component: HeaderControl,
+  title: "Atoms/Control",
+  component: Control,
   tags: ["autodocs"],
   argTypes: {
     type: {
@@ -20,10 +20,10 @@ const meta = {
         type: "select",
       },
       table: { defaultValue: { summary: "radio" } },
-      description: "Style of HeaderControl",
+      description: "Style of Control",
     },
   },
-} satisfies Meta<typeof HeaderControl>;
+} satisfies Meta<typeof Control>;
 
 export default meta;
 
