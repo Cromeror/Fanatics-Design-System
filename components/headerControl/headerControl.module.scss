@@ -1,0 +1,19 @@
+@import "themes/antd.tokens";
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: $tableHeaderBg;
+    width: 32px;
+    height: 36px;
+    border-bottom: 1px solid $tableHeaderBorder;
+}
+
+.containerDropdown {
+    width: 48px;
+}
+
+.icon {
+    margin-left: #{$marginExtraSmall}px;
+    color: $colorText;
+}

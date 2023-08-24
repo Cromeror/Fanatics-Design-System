@@ -26,4 +26,4 @@ export const SizeSpace = {
   controlHeightExtraSmall: 16,
   controlHeightSmall: 24,
   controlHeightLarge: 40,
-}
+};
