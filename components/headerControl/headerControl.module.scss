@@ -1,0 +1,17 @@
+@import "themes/antd.tokens";
+
+.container {
+  display: inline-block;
+  background-color: $colorBgLayout;
+  border-bottom: 1px solid $colorSplit;
+  padding: #{$paddingExtraSmall}px #{$paddingSmall}px;
+}
+
+.containerDropdown {
+  width: 48px;
+}
+
+.icon {
+  margin-left: #{$marginExtraSmall}px;
+  color: $colorText;
+}
