@@ -20,6 +20,19 @@
       text-align: start;
     }
   }
+
+  .iconsContainer {
+    display: flex;
+    align-items: center;
+    gap: $marginSmall;
+    margin-top: $marginSmall;
+  }
+
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    margin-top: $marginSmall;
+  }
 }
 
 .sorterContainer {
@@ -32,3 +45,5 @@
     color: $colorTextDisabled;
   }
 }
+
+
