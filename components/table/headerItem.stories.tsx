@@ -86,3 +86,15 @@ export const ShowSorterFilterSearch: Story = {
     search: true
   },
 };
+
+export const ShowSorterFilterSearchBulkSelect: Story = {
+  args: {
+    title: "Table header",
+    sorter: () => false,
+    filters: true,
+    search: true,
+    bulkSelect: true,
+    bulkSelectOptions: [ { value: 'Option 1', label: 'Option 1' },
+    { value: 'Option 2', label: 'Option 2' },]
+  },
+};
