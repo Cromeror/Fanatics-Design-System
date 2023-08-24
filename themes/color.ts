@@ -48,7 +48,7 @@ export const Color = {
   colorTertiaryTextActive: "#2E0C09",
 
   //Text
-  colorText: "#25292FE0", //88%
+  colorText: "#25292FE0",
   colorTextHeading: "#25292F",
   colorTextDescription: "#25292F 0.45",
   colorTextPlaceholder: "#25292F 0.25",
@@ -57,8 +57,8 @@ export const Color = {
   colorTextTertiary: "#25292F 0.45",
   colorTextQuaternary: "#25292F 0.25",
   colorTextLabel: "#25292F 0.65",
-  colorBgTextHover: "#25292F0F", //6%
-  colorBgTextPress: "#25292F26", //15%
+  colorBgTextHover: "#25292F0F",
+  colorBgTextPress: "#25292F26",
   colorTextLightSolid: "#FFFFFF ",
   colorItemText: "#FFFFFFA6",
 
@@ -82,14 +82,10 @@ export const Color = {
   colorMenuDarkBg: "#bae0ff",
   colorMenuSubItemBg: "#bae0ff",
 
-  // table
-  tableHeaderBg: "#F5F6F8",
-  tableHeaderBorder: "#00000014",
-
   //Border y Drivers
-  colorBorder: "#25292F29", //16%
+  colorBorder: "#25292F29",
   colorBorderSecondary: "#25292F 0.08",
-  colorSplit: "#25292F 0.06",
+  colorSplit: "#25292F0F",
 
   //Success
   colorSuccessBg: "#F6FFED",
