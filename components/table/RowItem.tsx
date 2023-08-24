@@ -5,7 +5,7 @@ interface RowItemProps {
 }
 
 export const RowItem = ({ children }: RowItemProps) => {
-  return <tr className={styles.rowItem}>{children}</tr>;
+  return <tr className={styles.rowItem}><td>{children}</td></tr>;
 };
 
 export default RowItem;
