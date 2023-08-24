@@ -1,8 +1,10 @@
 import { useState } from "react";
 import styles from "./HeaderItem.module.scss";
 import { BodyText } from "../typography/BodyText";
-import { CaretDownOutlined, CaretUpOutlined, FilterFilled, SearchOutlined } from "@ant-design/icons";
+import { CaretDownOutlined, CaretUpOutlined, FilterFilled, SearchOutlined, } from "@ant-design/icons";
 import Select from "antd/es/select";
+import { Input } from 'antd';
+
 
 interface HeaderItemProps {
   title: string;
@@ -56,13 +58,13 @@ export const HeaderItem = ({
         </div>
       </div>
       {bulkSelect && bulkSelectOptions && (
-        <div className={styles.searchContainer}>
+        <div className={styles.selectContainer}>
           <BulkSelectComponent options={bulkSelectOptions} handleChange={handleBulkSelectChange} />
         </div>
           )}
       {search && !bulkSelect && (
         <div className={styles.searchContainer}>
-          <input
+          <Input
             type="text"
             value={searchText}
             onChange={handleSearchChange}

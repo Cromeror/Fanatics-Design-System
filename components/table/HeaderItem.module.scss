@@ -33,6 +33,13 @@
     align-items: center;
     margin-top: $marginSmall;
   }
+
+  .selectContainer {
+    display: flex;
+    align-items: center;
+    margin-top: $marginSmall;
+    width: 100%;
+  }
 }
 
 .sorterContainer {
