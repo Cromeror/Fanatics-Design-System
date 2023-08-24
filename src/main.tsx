@@ -9,6 +9,7 @@ import {ConfigProvider, Space, Typography} from "antd";
 import {lightTheme} from "../themes/light-theme";
 import {TableExample} from "../components/table/TableExample";
 import { HeaderItem } from '../components/table/HeaderItem';
+import {RowItem} from '../components/table/RowItem';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -50,6 +51,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             search={true}
             >
           </HeaderItem>
+        </Space>
+        <Space>
+          <RowItem children={'Hola'}></RowItem>
         </Space>
       </Space>
     </ConfigProvider>
