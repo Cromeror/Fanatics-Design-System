@@ -21,19 +21,25 @@ const meta = {
       description: "Show sorter",
       table: {defaultValue: {summary: false}}
     },
+    type: {
+      control: {type: 'select'},
+      options: ['default', 'bulk', 'select'],
+      table: {defaultValue: {summary: "default"}}
+    },
   }
-} satisfies Meta<typeof HeaderItem>;
+} as Meta<typeof HeaderItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    title: "Table header"
+    title: "Table header",
+    type: "default"
   },
 };
 
-export const DefaultSorter: Story = {
+export const ShowSorter: Story = {
   args: {
     title: "Table header",
     sorter: () => false
@@ -54,7 +60,7 @@ export const ShowFilters: Story = {
   },
 };
 
-export const ShowSorterFilter: Story = {
+export const ShowSorterAndFilter: Story = {
   args: {
     title: "Table header",
     sorter: () => false,
@@ -62,7 +68,7 @@ export const ShowSorterFilter: Story = {
   },
 };
 
-export const ShowSorterSearch: Story = {
+export const ShowSorterAndSearch: Story = {
   args: {
     title: "Table header",
     sorter: () => false,
@@ -70,7 +76,7 @@ export const ShowSorterSearch: Story = {
   },
 };
 
-export const ShowFilterSearch: Story = {
+export const ShowFilterAndSearch: Story = {
   args: {
     title: "Table header",
     filters: true,
@@ -87,14 +93,16 @@ export const ShowSorterFilterSearch: Story = {
   },
 };
 
-export const ShowSorterFilterSearchBulkSelect: Story = {
+export const TypeSelectWithShowSorterFilterAndSearch: Story = {
   args: {
     title: "Table header",
     sorter: () => false,
     filters: true,
     search: true,
-    bulkSelect: true,
-    bulkSelectOptions: [ { value: 'Option 1', label: 'Option 1' },
-    { value: 'Option 2', label: 'Option 2' }]
+    type:"select",
+    bulkSelectOptions: [
+      {value: 'Option 1', label: 'Option 1'},
+      {value: 'Option 2', label: 'Option 2'}
+    ]
   },
 };
