@@ -1,0 +1,36 @@
+@import "themes/antd.tokens";
+
+.container {
+  align-items: center;
+  border-radius: $borderRadiusSmall;
+  display: flex;
+  flex-direction: column;
+  font-size: #{$fontSizeTitle-small}px;
+  height: $heightControlHeightSmall;
+  justify-content: center;
+  line-height: $lineHeightTitle-small;
+  width: $heightControlHeightSmall;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $colorBgTextHover;
+  }
+
+  &.selected {
+    color: $colorPrimaryBase;
+    border: 1px solid $colorPrimaryBase;
+  }
+
+  &.disabled {
+    color: $colorTextDisabled;
+    svg {
+      color: $colorTextDisabled;
+    }
+
+    &.selected {
+      border: none;
+      color: $colorTextDisabled;
+      background-color: $controlItemBgActiveDisabled;
+    }
+  }
+}
