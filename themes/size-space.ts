@@ -24,6 +24,6 @@ export const SizeSpace = {
   marginXXL: 48,
   controlHeight: 32,
   controlHeightExtraSmall: 16,
-  controlHeightSmall: 24,
+  controlHeightSmall: "24px",
   controlHeightLarge: 40,
 };

@@ -34,7 +34,7 @@ export const lightTheme = {
     "lineHeightTitle-small": "22px",
     "fontSizeTitle-large": 18,
     "fontSizeTitle-medium": 16,
-    "fontSizeTitle-small": 14,
+    "fontSizeTitle-small": "14px",
 
     // BodyText
     "fontSizeBodyText-extraLarge": 20,
@@ -47,9 +47,6 @@ export const lightTheme = {
     "lineHeightBodyText-base": "22px",
     "lineHeightBodyText-small": "20px",
     "lineHeightBodyText-extraSmall": "18px",
-
-    // Pagination
-    heightControlHeightSmall: "24px",
 
     ...Color,
     ...SizeSpace,
