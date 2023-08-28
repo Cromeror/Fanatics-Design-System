@@ -1,22 +1,24 @@
+@import "themes/antd.tokens.scss";
+
 .rowItem {
-  background-color: #FFF;
+  background-color: $colorTextLightSolid;
 
   &:hover{
-    background-color: #BAE0FF;
+    background-color: $controlItemBgActiveHover;
   }
 
 }
 .rowItemCell {
-  border-bottom: 1px solid #00000014;
+  border-bottom: 1px solid $controlItemBgHover;
   display: inline-flex;
   height: 48px;
   min-height: 40px;
   max-height: 68px;
-  padding: var(--padding-padding-small, 8px);
+  padding: $paddingSmall;
   align-items: center;
-  gap: var(--margin-margin-small, 8px);
+  gap: $marginSmall;
   flex-shrink: 0;
 }
 .selected {
-  background-color: #E6F4FF;
+  background-color: $controlItemBgActive;
 }

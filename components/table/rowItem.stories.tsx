@@ -3,6 +3,7 @@ import { Meta } from "@storybook/react";
 import { RowItem } from "./RowItem";
 import { Tag, Input, Space } from "antd";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import {StoryObj} from "@storybook/react";
 
 const meta: Meta = {
   title: "Atoms/RowItem",
@@ -14,7 +15,7 @@ const meta: Meta = {
       description: "Content to display inside the row item",
     },
   },
-} satisfies Meta<typeof RowItem>;
+} as Meta<typeof RowItem>;
 export default meta;
 
 type Story = StoryObj<typeof meta>;
@@ -36,10 +37,10 @@ export const DefaultSelected: Story = {
 export const WithAntDTag: Story = {
   args: {
     children: (
-      <Space>
-        <Tag color="blue">Tag 1</Tag>
-        <Tag color="green">Tag 2</Tag>
-      </Space>
+      <>
+      <Tag color="blue">Tag 1</Tag>
+      <Tag color="green">Tag 2</Tag>
+    </>
     ),
   },
 };
@@ -47,10 +48,10 @@ export const WithAntDTag: Story = {
 export const WithAntDIcons: Story = {
   args: {
     children: (
-      <Space>
-        <EditOutlined />
-        <DeleteOutlined />
-      </Space>
+      <>
+      <EditOutlined />
+      <DeleteOutlined />
+    </>
     ),
   },
 };
@@ -64,11 +65,11 @@ export const WithAntDInput: Story = {
 export const WithAllAntDComponents: Story = {
   args: {
     children: (
-      <Space>
-        <Tag color="purple">Tag 1</Tag>
-        <EditOutlined />
-        <Input placeholder="Enter something" />
-      </Space>
+      <>
+      <Tag color="purple">Tag 1</Tag>
+      <EditOutlined />
+      <Input placeholder="Enter something" />
+    </>
     ),
   },
 };

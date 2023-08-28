@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import styles from "./rowItem.module.scss";
 interface RowItemProps {
   children: React.ReactNode;
