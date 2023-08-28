@@ -29,6 +29,7 @@ const columnsExample = [
   {
     title: 'Name',
     dataIndex: 'name',
+    key: 'name',
     filters: [
       {
         text: 'Joe',
@@ -62,12 +63,14 @@ const columnsExample = [
   {
     title: 'Age',
     dataIndex: 'age',
+    key: 'age',
     defaultSortOrder: 'descend',
     sorter: (a, b) => a.age - b.age,
   },
   {
     title: 'Address',
     dataIndex: 'address',
+    key: 'address',
     filters: [
       {
         text: 'London',
