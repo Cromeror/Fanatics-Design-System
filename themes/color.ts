@@ -74,7 +74,7 @@ export const Color = {
   controlItemBgHover: "#0000000a",
   controlItemBgActive: "#e6f4ff",
   controlItemBgActiveHover: "#bae0ff",
-  controlItemBgActiveDisabled: "#000000 0.15",
+  controlItemBgActiveDisabled: "#00000026",
   colorBgMask: "#bae0ff",
   segmentedBgColorSelected: "#bae0ff",
   segmentedGroupBg: "#bae0ff",
