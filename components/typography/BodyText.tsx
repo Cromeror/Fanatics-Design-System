@@ -1,10 +1,10 @@
-import {ReactElement} from "react";
-import {theme, Typography} from "antd";
+import { ReactElement, ReactNode } from "react";
+import { theme, Typography } from "antd";
 
 interface BodyTextProps {
-  children?: ReactElement | string;
+  children?: ReactNode | string;
   as?: ReactElement;
-  size?: "extra-large" | "large" | "base" | "small" | "extra-small"
+  size?: "extra-large" | "large" | "base" | "small" | "extra-small";
   strong?: boolean;
   underline?: boolean;
   delete?: boolean;
@@ -16,24 +16,33 @@ const BODY_TEXT_SIZES = {
   large: "fontSizeBodyText-large",
   base: "fontSizeBodyText-base",
   small: "fontSizeBodyText-small",
-  "extra-small": "fontSizeBodyText-extraSmall"
-}
+  "extra-small": "fontSizeBodyText-extraSmall",
+};
 
 const BODY_TEXT_LINE_HEIGHT = {
   "extra-large": "lineHeightBodyText-extraLarge",
   large: "lineHeightBodyText-large",
   base: "lineHeightBodyText-base",
   small: "lineHeightBodyText-small",
-  "extra-small": "lineHeightBodyText-extraSmall"
-}
+  "extra-small": "lineHeightBodyText-extraSmall",
+};
 
-export const BodyText = ({children, size = "base", as: Component = Typography.Text, ...otherProps}: BodyTextProps) => {
-  const {token} = theme.useToken();
+export const BodyText = ({
+  children,
+  size = "base",
+  as: Component = Typography.Text,
+  ...otherProps
+}: BodyTextProps) => {
+  const { token } = theme.useToken();
 
   const styles = {
     fontSize: token[BODY_TEXT_SIZES[size]],
     lineHeight: token[BODY_TEXT_LINE_HEIGHT[size]],
-  }
+  };
 
-  return <Component style={styles} {...otherProps}>{children}</Component>
-}
+  return (
+    <Component style={styles} {...otherProps}>
+      {children}
+    </Component>
+  );
+};

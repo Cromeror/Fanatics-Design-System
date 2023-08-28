@@ -1,66 +1,80 @@
-import { ReactElement } from "react";
-import { Table, ConfigProvider } from "antd";
-import type { ColumnsType } from 'antd/es/table';
-import stylesButton from "../button/button.module.scss";
-
-
-interface DataType {
-  key: string;
-  tableHeader1: string;
-  tableHeader2: string;
-  sort?: string;
-  filter?: string;
-}
-
-const columns: ColumnsType<DataType> = [
-  {
-    title: 'Table header1',
-    dataIndex: 'tableHeader1',
-    key: 'tableHeader1',
-    sorter: (a, b) => a.sort.localeCompare(b.sort),
-    filters: [
-      { text: 'Filter 1', value: 'filter1' },
-      { text: 'Filter 2', value: 'filter2' },
-    ], // Opciones de filtro
-    onFilter: (value, record) => record.filter.includes(value),
-  },
-  {
-    title: 'Table header2',
-    dataIndex: 'tableHeader2',
-    key: 'tableHeader2',
-  }
-];
-
-export const HEADER_ITEM_TYPES = {
-  default: "default",
-  bulkImput: "bulkImput",
-  bulkSelect: "bulkSelect",
-}
+import * as React from "react";
+import { FC, useState } from "react";
+import styles from "./HeaderItem.module.scss";
+import { BodyText } from "../typography/BodyText";
+import {
+  CaretDownOutlined,
+  CaretUpOutlined,
+  FilterFilled,
+  SearchOutlined,
+} from "@ant-design/icons";
+import { Input } from "antd";
+import { Select } from "../select/Select";
+import classNames from "classnames";
+import { SelectValue } from "antd/es/select";
 
 interface HeaderItemProps {
-  children: ReactElement;
-  size?: "small" | "middle" | "large";
+  title: string | React.ReactNode;
+  sorter?: boolean;
+  filters?: boolean;
+  search?: boolean;
+  type?: "default" | "bulk" | "select";
+  selectOptions?: {
+    label: React.ReactNode;
+    value?: string | number | null;
+  }[];
 }
 
-//colorBgContainer  headerClassName={stylesButton.test123}
-
-const styles = {
-  backgroundColor: "red"
-}
-
-export const custonTheme = {
-  token: {
-    colorBgContainer: "#F5F6F8",
-  }
-
-}
-
-export const HeaderItem = ({ children, size = "middle" }: HeaderItemProps) => {
+const SorterComponent = () => {
   return (
-    <ConfigProvider theme={custonTheme}>
-      <Table columns={columns} dataSource={[]} size={size} />
-    </ConfigProvider>
-    );
-}
+    <div className={styles.sorterContainer}>
+      <CaretUpOutlined />
+      <CaretDownOutlined />
+    </div>
+  );
+};
 
-export default HeaderItem;
+export const HeaderItem: FC<HeaderItemProps> = ({
+  title,
+  sorter,
+  filters,
+  search,
+  selectOptions = [],
+  type = "default",
+}: HeaderItemProps) => {
+  const [searchText, setSearchText] = useState("");
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setSearchText(e.target.value);
+  const handleBulkSelectChange = (value: SelectValue) =>
+    console.log("Selected value:", value);
+
+  return (
+    <th className={styles.headerItem}>
+      <div
+        className={classNames(
+          styles.headerItem__titleSection,
+          type !== "default" && styles.headerItem__hasInput
+        )}
+      >
+        <BodyText size={"small"}>{title}</BodyText>
+        <div className={styles.iconsContainer}>
+          {sorter && <SorterComponent />}
+          {filters && <FilterFilled />}
+          {search && <SearchOutlined />}
+        </div>
+      </div>
+      {type === "select" && selectOptions && (
+        <Select options={selectOptions} onChange={handleBulkSelectChange} />
+      )}
+      {type === "bulk" && (
+        <Input
+          type="text"
+          value={searchText}
+          onChange={handleSearchChange}
+          placeholder="Input"
+        />
+      )}
+    </th>
+  );
+};

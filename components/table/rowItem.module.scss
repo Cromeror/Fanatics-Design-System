@@ -1,0 +1,24 @@
+@import "themes/antd.tokens.scss";
+
+.rowItem {
+  background-color: $colorTextLightSolid;
+
+  &:hover{
+    background-color: $controlItemBgActiveHover;
+  }
+
+}
+.rowItemCell {
+  border-bottom: 1px solid $controlItemBgHover;
+  display: inline-flex;
+  height: 48px;
+  min-height: 40px;
+  max-height: 68px;
+  padding: $paddingSmall;
+  align-items: center;
+  gap: $marginSmall;
+  flex-shrink: 0;
+}
+.selected {
+  background-color: $controlItemBgActive;
+}

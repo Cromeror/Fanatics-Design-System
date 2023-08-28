@@ -7,7 +7,9 @@ import {Button} from "../components/button/Button";
 import {Logotype} from "../components/logotype/Logotype"
 import {ConfigProvider, Space, Typography} from "antd";
 import {lightTheme} from "../themes/light-theme";
-import {HeaderItem} from "../components/table/HeaderItem"
+import {TableExample} from "../components/table/TableExample";
+import { HeaderItem } from '../components/table/HeaderItem';
+import {RowItem} from '../components/table/RowItem';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -36,7 +38,22 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Button type='textDark'>Text Dark Button</Button>
         </Space>
         <Space>
-          <HeaderItem></HeaderItem>
+          <TableExample></TableExample>
+          <HeaderItem
+            title={'Header Item'}
+            search={true}
+            bulkSelect={true}
+            bulkSelectOptions={[{ value: 'Option 1', label: 'Option 1' },
+              { value: 'Option 2', label: 'Option 2' },]}>
+          </HeaderItem>
+          <HeaderItem
+            title={'Header Item'}
+            search={true}
+            >
+          </HeaderItem>
+        </Space>
+        <Space>
+          <RowItem children={'Hola'}></RowItem>
         </Space>
       </Space>
     </ConfigProvider>
