@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs';
+import Rectangle from './Rectangle'; // Ajusta la importación según tu estructura
+import {primaryColors, alertColors, grayScale} from './colors';
+
+<Meta title="Fanatics/Colors" />
+
+<style>
+  {`
+    /* Estilos personalizados */
+    .link-list {
+      display: flex;
+      margin: -10px;
+      overflow-x: auto; /* Permite desplazamiento horizontal si hay muchos colores */
+    }
+
+    .link-item {
+      margin: 10px;
+      text-align: center;
+    }
+
+    .link-item span {
+      display: block;
+    }
+  `}
+</style>
+
+# Colors
+
+## Primary Colors
+
+<div className="link-list">
+  {primaryColors.map((color, index) => (
+    <div className="link-item" key={index}>
+      <Rectangle backgroundColor={color.hex} />
+      <span>{color.name}</span>
+      <span>{color.hex}</span>
+    </div>
+  ))}
+</div>
+
+## Secondary Colors
+
+<div className="link-list">
+  {alertColors.map((color, index) => (
+    <div className="link-item" key={index}>
+      <Rectangle backgroundColor={color.hex} />
+      <span>{color.name}</span>
+      <span>{color.hex}</span>
+    </div>
+  ))}
+</div>
+
+## Gray Scale
+
+<div className="link-list">
+  {grayScale.map((color, index) => (
+    <div className="link-item" key={index}>
+      <Rectangle backgroundColor={color.hex} />
+      <span>{color.name}</span>
+      <span>{color.hex}</span>
+    </div>
+  ))}
+</div>
