@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
 import Rectangle from './Rectangle'; // Ajusta la importación según tu estructura
-import {primaryColors, alertColors, grayScale} from './colors';
+import { Color } from '../../themes/color';
 
 <Meta title="Fanatics/Colors" />
 
@@ -29,35 +29,326 @@ import {primaryColors, alertColors, grayScale} from './colors';
 ## Primary Colors
 
 <div className="link-list">
-  {primaryColors.map((color, index) => (
-    <div className="link-item" key={index}>
-      <Rectangle backgroundColor={color.hex} />
-      <span>{color.name}</span>
-      <span>{color.hex}</span>
-    </div>
-  ))}
+  {Object.entries(Color)
+    .slice(10, 20)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
 </div>
 
 ## Secondary Colors
 
 <div className="link-list">
-  {alertColors.map((color, index) => (
-    <div className="link-item" key={index}>
-      <Rectangle backgroundColor={color.hex} />
-      <span>{color.name}</span>
-      <span>{color.hex}</span>
-    </div>
-  ))}
+  {Object.entries(Color)
+    .slice(20, 30)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
 </div>
 
-## Gray Scale
+## Tertiary
 
 <div className="link-list">
-  {grayScale.map((color, index) => (
-    <div className="link-item" key={index}>
-      <Rectangle backgroundColor={color.hex} />
-      <span>{color.name}</span>
-      <span>{color.hex}</span>
-    </div>
-  ))}
+  {Object.entries(Color)
+    .slice(30, 40)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+## Text
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(40, 53)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+## Icons
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(53, 55)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+## Surface
+
+### Backgrounds
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(55, 69)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Border and Drivers
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(69, 72)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+## Functional
+### Success
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(72, 82)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Warning
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(82, 92)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Error
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(92, 102)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Info
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(102, 112)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+## Core Ant Colors
+
+### Dust Red
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(112, 122)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Volcano
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(122, 132)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Sunset Orange
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(132, 142)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Calendula Gold
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(142, 152)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Sunrise Yellow
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(152, 162)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Lime
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(162, 172)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Polar Green
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(172, 182)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Cyan
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(182, 192)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### DayBreak Blue
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(192, 202)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Geek Blue
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(202, 212)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Golden Purple
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(212, 222)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
+</div>
+
+### Magenta
+
+<div className="link-list">
+  {Object.entries(Color)
+    .slice(222, 232)
+    .map(([name, value]) => (
+      <div className="link-item" key={name}>
+        <Rectangle backgroundColor={value} />
+        <span>{name}</span>
+        <span>{value}</span>
+      </div>
+    ))}
 </div>
