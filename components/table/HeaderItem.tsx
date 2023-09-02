@@ -12,17 +12,20 @@ import { Input } from "antd";
 import { Select } from "../select/Select";
 import classNames from "classnames";
 import { SelectValue } from "antd/es/select";
+import { FilterMenu } from "./FilterMenu";
+
+export type Options = {
+  label: React.ReactNode;
+  value?: string | number | null;
+};
 
 interface HeaderItemProps {
   title: string | React.ReactNode;
   sorter?: boolean;
-  filters?: boolean;
+  filters?: Options[];
   search?: boolean;
   type?: "default" | "bulk" | "select";
-  selectOptions?: {
-    label: React.ReactNode;
-    value?: string | number | null;
-  }[];
+  selectOptions?: Options[];
 }
 
 const SorterComponent = () => {
@@ -37,12 +40,13 @@ const SorterComponent = () => {
 export const HeaderItem: FC<HeaderItemProps> = ({
   title,
   sorter,
-  filters,
+  filters = [],
   search,
   selectOptions = [],
   type = "default",
 }: HeaderItemProps) => {
   const [searchText, setSearchText] = useState("");
+  const hasFilters = filters.length > 0;
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setSearchText(e.target.value);
@@ -54,21 +58,30 @@ export const HeaderItem: FC<HeaderItemProps> = ({
       <div
         className={classNames(
           styles.headerItem__titleSection,
-          type !== "default" && styles.headerItem__hasInput
+          (type !== "default" || hasFilters) && styles.headerItem__hasInput
         )}
       >
         <BodyText size={"small"}>{title}</BodyText>
         <div className={styles.iconsContainer}>
           {sorter && <SorterComponent />}
-          {filters && <FilterFilled />}
+          {hasFilters && (
+            <FilterMenu options={filters}>
+              <FilterFilled />
+            </FilterMenu>
+          )}
           {search && <SearchOutlined />}
         </div>
       </div>
       {type === "select" && selectOptions && (
-        <Select options={selectOptions} onChange={handleBulkSelectChange} />
+        <Select
+          className={styles.select}
+          options={selectOptions}
+          onChange={handleBulkSelectChange}
+        />
       )}
       {type === "bulk" && (
         <Input
+          className={styles.input}
           type="text"
           value={searchText}
           onChange={handleSearchChange}

@@ -1,0 +1,31 @@
+@import "themes/antd.tokens.scss";
+
+.container {
+  background-color: $colorBgContainer;
+  border-radius: #{$borderRadius}px;
+  padding: #{$paddingExtraSmall}px;
+  max-width: 200px;
+
+  .filter {
+    padding: #{$paddingExtraSmall}px #{$paddingSmall}px;
+    border-color: $colorBorder !important;
+
+    path {
+      color: $colorIcon;
+    }
+  }
+}
+
+.tagContainer {
+  padding: #{$paddingSmall}px;
+  :global {
+    .ant-checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: #{$marginSmall}px;
+      .ant-checkbox + span {
+        padding-left: #{$marginSmall}px;
+      }
+    }
+  }
+}

@@ -63,7 +63,7 @@ export const Color = {
   colorItemText: "#FFFFFFA6",
 
   //Icons
-  colorIcon: "#25292F 0.45",
+  colorIcon: "#25292f73",
   colorIconHover: "#25292F 0.88",
 
   //Backgrounds
