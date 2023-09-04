@@ -2,9 +2,8 @@
 
 .headerItem {
   background-color: $colorBgLayout;
-  display: flex;
-  flex-direction: column;
-  padding: $paddingSmall;
+  padding: #{$paddingSmall}px;
+  vertical-align: top;
 
   & svg {
     color: $colorTextDisabled;
@@ -13,7 +12,7 @@
 
   &__titleSection {
     display: flex;
-    gap: $marginSmall;
+    gap: #{$marginSmall}px;
 
     & > *:first-child {
       flex: 1;
@@ -22,25 +21,25 @@
   }
 
   &__hasInput {
-    margin-bottom: $marginSmall;
+    margin-bottom: #{$marginSmall}px;
   }
 
   .iconsContainer {
     align-items: center;
     display: flex;
-    gap: $marginSmall;
+    gap: #{$marginSmall}px;
   }
 
   .searchContainer {
     align-items: center;
     display: flex;
-    margin-top: $marginSmall;
+    margin-top: #{$marginSmall}px;
   }
 
   .selectContainer {
     align-items: center;
     display: flex;
-    margin-top: $marginSmall;
+    margin-top: #{$marginSmall}px;
     width: 100%;
   }
 }
@@ -55,4 +54,9 @@
     margin-bottom: -4px;
     color: $colorTextDisabled;
   }
+}
+
+.input,
+.select {
+  width: 100%;
 }

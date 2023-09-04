@@ -2,16 +2,16 @@
 
 .container {
   align-items: center;
-  border-radius: $borderRadiusSmall;
+  border-radius: #{$borderRadiusSmall}px;
   box-sizing: border-box;
   color: $colorText;
   display: flex;
   flex-direction: column;
   font-size: $fontSizeTitle-small;
-  height: $controlHeightSmall;
+  height: #{$controlHeightSmall}px;
   justify-content: center;
   line-height: $lineHeightTitle-small;
-  width: $controlHeightSmall;
+  width: #{$controlHeightSmall}px;
 
   svg {
     color: $colorText;
