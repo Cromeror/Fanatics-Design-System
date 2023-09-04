@@ -1,16 +1,20 @@
-import PropTypes from "prop-types";
 import styles from "./Rectangle.module.scss";
+import {Col, Row} from 'antd';
+import {BodyText} from "../../components/typography/BodyText";
 
-export const Rectangle = ({ backgroundColor }) => {
+export const Rectangle = ({backgroundColor, title, hexCode}) => {
   const rectangleStyle = {
     backgroundColor: backgroundColor,
   };
 
-  return <div className={styles.rectangle} style={rectangleStyle}></div>;
-};
-
-Rectangle.propTypes = {
-  backgroundColor: PropTypes.string.isRequired,
+  return (
+    <Row gutter={[0, 4]}>
+      <div className={styles.rectangle} style={rectangleStyle}/>
+      <Col span={24}>
+        <BodyText>{title}</BodyText>
+      </Col>
+      <BodyText>{hexCode}</BodyText>
+    </Row>);
 };
 
 export default Rectangle;
