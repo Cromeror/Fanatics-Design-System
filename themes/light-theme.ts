@@ -48,6 +48,9 @@ export const lightTheme = {
     "lineHeightBodyText-small": "20px",
     "lineHeightBodyText-extraSmall": "18px",
 
+    // font
+    fontFamily: "'Open Sans', sans-serif",
+
     ...Color,
     ...SizeSpace,
     ...borderRadius,
