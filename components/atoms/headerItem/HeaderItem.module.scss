@@ -5,6 +5,12 @@
   padding: #{$paddingSmall}px;
   vertical-align: top;
 
+  & > *:not(:first-child) {
+    &:last-child {
+      margin-top: #{$marginSmall}px;
+    }
+  }
+
   & svg {
     color: $colorTextDisabled;
     font-size: 12px;
@@ -25,10 +31,6 @@
       flex: 1;
       text-align: start;
     }
-  }
-
-  &__hasInput {
-    margin-bottom: #{$marginSmall}px;
   }
 
   .iconsContainer {

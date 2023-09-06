@@ -1,6 +1,7 @@
 import React from "react";
-import type { Meta } from "@storybook/react";
-import { FilterMenu } from "./FilterMenu";
+import type {Meta} from "@storybook/react";
+import {FilterMenu} from "./FilterMenu";
+import Button from "../button";
 
 const meta = {
   title: "Atoms/FilterMenu",
@@ -11,15 +12,15 @@ const meta = {
       control: {
         type: null,
       },
-      table: { defaultValue: { summary: "undefined" } },
+      table: {defaultValue: {summary: "undefined"}},
       description: "`React.ReactNode | undefined`",
     },
     options: {
-      table: { defaultValue: { summary: "[]" } },
+      table: {defaultValue: {summary: "[]"}},
       description: "Option of the filter",
     },
   },
-} satisfies Meta<typeof FilterMenu>;
+} as Meta<typeof FilterMenu>;
 
 export default meta;
 const Template = (args) => <FilterMenu {...args} />;
@@ -27,7 +28,11 @@ const Template = (args) => <FilterMenu {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  children: <p>Click me!</p>,
+  children: (
+    <Button type={"primary"}>
+      Click to open menu
+    </Button>
+  ),
   options: [
     {
       label: "London",

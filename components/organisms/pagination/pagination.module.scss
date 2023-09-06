@@ -1,3 +1,7 @@
+@import "../../../themes/antd.tokens";
+
 .container {
   display: flex;
+  padding: #{$padding}px #{$paddingSmall}px;
+  gap: #{$marginSmall}px;
 }

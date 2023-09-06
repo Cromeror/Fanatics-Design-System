@@ -13,6 +13,7 @@
   justify-content: center;
   line-height: $lineHeightTitle-small;
   width: #{$controlHeightSmall}px;
+  font-family: $fontFamily;
 
   svg {
     color: $colorText;
@@ -25,10 +26,12 @@
   &.selected {
     color: $colorPrimaryBase;
     border: 1px solid $colorPrimaryBase;
+    font-weight: 600;
   }
 
   &.disabled {
     color: $colorTextDisabled;
+
     svg {
       color: $colorTextDisabled;
     }

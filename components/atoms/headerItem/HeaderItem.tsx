@@ -1,18 +1,17 @@
 import * as React from "react";
-import { FC, useState } from "react";
+import {FC, useState} from "react";
 import styles from "./HeaderItem.module.scss";
-import { BodyText } from "../typography/BodyText";
 import {
   CaretDownOutlined,
   CaretUpOutlined,
   FilterFilled,
   SearchOutlined,
 } from "@ant-design/icons";
-import { Input } from "antd";
-import { Select } from "../select/Select";
+import {Input} from "antd";
+import {Select} from "../select/Select";
 import classNames from "classnames";
-import { SelectValue } from "antd/es/select";
-import { FilterMenu } from "../filterMenu/FilterMenu";
+import {SelectValue} from "antd/es/select";
+import {FilterMenu} from "../filterMenu/FilterMenu";
 
 export type Options = {
   label: React.ReactNode;
@@ -31,20 +30,20 @@ interface HeaderItemProps {
 const SorterComponent = () => {
   return (
     <div className={styles.sorterContainer}>
-      <CaretUpOutlined />
-      <CaretDownOutlined />
+      <CaretUpOutlined/>
+      <CaretDownOutlined/>
     </div>
   );
 };
 
 export const HeaderItem: FC<HeaderItemProps> = ({
-  title,
-  sorter,
-  filters = [],
-  search,
-  selectOptions = [],
-  type = "default",
-}: HeaderItemProps) => {
+                                                  title,
+                                                  sorter,
+                                                  filters = [],
+                                                  search,
+                                                  selectOptions = [],
+                                                  type = "default",
+                                                }: HeaderItemProps) => {
   const [searchText, setSearchText] = useState("");
   const hasFilters = filters!.length > 0;
 
@@ -55,21 +54,16 @@ export const HeaderItem: FC<HeaderItemProps> = ({
 
   return (
     <th className={styles.headerItem}>
-      <div
-        className={classNames(
-          styles.headerItem__titleSection,
-          (type !== "default" || hasFilters) && styles.headerItem__hasInput
-        )}
-      >
+      <div className={classNames(styles.headerItem__titleSection)}>
         {title}
         <div className={styles.iconsContainer}>
-          {sorter && <SorterComponent />}
+          {sorter && <SorterComponent/>}
           {hasFilters && (
             <FilterMenu options={filters}>
-              <FilterFilled />
+              <FilterFilled/>
             </FilterMenu>
           )}
-          {search && <SearchOutlined />}
+          {search && <SearchOutlined/>}
         </div>
       </div>
       {type === "select" && selectOptions && (

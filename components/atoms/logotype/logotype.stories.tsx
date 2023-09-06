@@ -1,14 +1,15 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Logotype } from "./Logotype";
+import type {Meta, StoryObj} from "@storybook/react";
+import {Logotype} from "./Logotype";
+import {lightTheme} from "../../../themes/light-theme";
 
 const meta = {
   title: "Atoms/Logotype",
   component: Logotype,
   tags: ["autodocs"]
-} satisfies Meta<typeof Logotype>;
+} as Meta<typeof Logotype>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Logotype>;
 
 export const Default: Story = {
   args: {
@@ -20,4 +21,9 @@ export const Reversed: Story = {
   args: {
     type: "reversed"
   },
+  render: ({type}) => (
+    <div style={{backgroundColor: lightTheme.token.colorSecondary, width: "fit-content"}}>
+      <Logotype type={type}/>
+    </div>
+  )
 };

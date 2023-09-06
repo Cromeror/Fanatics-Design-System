@@ -1,15 +1,15 @@
-import { Checkbox, Input, Dropdown, CheckboxOptionType } from "antd";
+import {Checkbox, Input, Dropdown, CheckboxOptionType} from "antd";
 import styles from "./filterMenu.module.scss";
-import { SearchOutlined } from "@ant-design/icons";
-import type { Options } from "../headerItem/HeaderItem";
-import React, { ReactNode, useEffect, useState } from "react";
+import {SearchOutlined} from "@ant-design/icons";
+import type {Options} from "../headerItem/HeaderItem";
+import {ReactNode, useEffect, useState} from "react";
 
 interface FilterMenuProps {
   options: Options[];
   children: ReactNode;
 }
 
-export const FilterMenu = ({ children, options }: FilterMenuProps) => {
+export const FilterMenu = ({children, options}: FilterMenuProps) => {
   const [searchValue, setSearValue] = useState<string>("");
   const [filteredOptions, setFilteredOptions] = useState<Options[]>(options);
 
@@ -33,7 +33,7 @@ export const FilterMenu = ({ children, options }: FilterMenuProps) => {
             onChange={(
               e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
             ) => setSearValue(e.target.value)}
-            suffix={<SearchOutlined />}
+            suffix={<SearchOutlined/>}
           />
           <div className={styles.tagContainer}>
             {

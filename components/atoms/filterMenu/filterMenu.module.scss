@@ -5,6 +5,7 @@
   border-radius: #{$borderRadius}px;
   padding: #{$paddingExtraSmall}px;
   max-width: 200px;
+  box-shadow: $evaluationHigh;
 
   .filter {
     padding: #{$paddingExtraSmall}px #{$paddingSmall}px;
@@ -18,11 +19,13 @@
 
 .tagContainer {
   padding: #{$paddingSmall}px;
+
   :global {
     .ant-checkbox-group {
       display: flex;
       flex-direction: column;
       gap: #{$marginSmall}px;
+
       .ant-checkbox + span {
         padding-left: #{$marginSmall}px;
       }
