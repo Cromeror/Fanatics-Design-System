@@ -6,7 +6,7 @@
   &Wrapper {
     display: flex;
     gap: #{$marginSmall}px;
-    font-size: $fontSizeBodyText-small;
+    font-size: #{$fontSizeBodyText-small}px;
     color: $colorText;
     font-family: $fontFamily;
   }

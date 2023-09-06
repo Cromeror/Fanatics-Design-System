@@ -33,7 +33,7 @@ export const Table = ({columns, data}: TableProps) => {
 
   const customTheme = {
     token: {
-      colorBgContainer: lightTheme.token.colorBgContainer,
+      colorBgContainer: lightTheme.token.colorBgContainer
     },
   };
 
@@ -51,6 +51,7 @@ export const Table = ({columns, data}: TableProps) => {
                      row: TableHeaderRow,
                    },
                    body: {
+                     wrapper: ({children}) => <tbody>{children}</tbody>,
                      cell: RowItem,
                      row: TableDataRow,
                    }
