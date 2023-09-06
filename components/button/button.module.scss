@@ -1,5 +1,12 @@
 @import "themes/antd.tokens";
 
+.size {
+  &Middle {
+    padding: 0 #{$padding}px;
+    font-size: #{$fontSizeBodyText-base}px;
+  }
+}
+
 .buttonDisable {
   color: $colorSecondaryBgHover;
   border: 1px solid $colorBorder;
@@ -10,6 +17,18 @@
   border: 1px solid $colorPrimary;
   background: $colorPrimary;
   color: $colorTextLightSolid;
+
+  &.size {
+    &Small {
+      padding: 0 #{$paddingSmall}px;
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      padding: 0 #{$padding}px;
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
 
   &:not(:disabled):not(.ant-btn-disabled) {
     &:hover {
@@ -66,6 +85,18 @@
   color: $colorText;
   background: $colorBgContainer;
 
+  &.size {
+    &Small {
+      padding: 0 #{$paddingSmall}px;
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      padding: 0 #{$padding}px;
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
+
   &:not(:disabled):not(.ant-btn-disabled) {
     &:hover {
       color: $colorPrimaryHover;
@@ -118,6 +149,17 @@
 }
 
 .textButton {
+  &.size {
+    &Small {
+      padding: 0 #{$paddingSmall}px;
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      padding: 0 #{$padding}px;
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
 
   &:not(:disabled):not(.ant-btn-disabled) {
 
@@ -175,6 +217,18 @@
 }
 
 .linkButton {
+  &.size {
+    &Small {
+      padding: 0 #{$paddingSmall}px;
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      padding: 0 #{$padding}px;
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
+
   &:not(:disabled):not(.ant-btn-disabled) {
     color: $colorPrimaryBase;
     border: 0;
@@ -225,7 +279,19 @@
   }
 }
 
-.textDarkButton {
+.tertiaryButton {
+  &.size {
+    &Small {
+      padding: 0 #{$paddingSmall}px;
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      padding: 0 #{$padding}px;
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
+
   &:not(:disabled):not(.ant-btn-disabled) {
     background: $colorSecondaryBase;
     color: $colorItemText;

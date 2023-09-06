@@ -7,7 +7,7 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     type: {
-      options: ["primary", "secondary", "text", "link", "textDark"],
+      options: ["primary", "secondary", "text", "link", "tertiary"],
       control: {
         type: "select",
       },
@@ -223,23 +223,23 @@ export const LinkLargeDanger: Story = {
   },
 };
 
-export const TextDarkSmall: Story = {
+export const TertiarySmall: Story = {
   args: {
-    type: "textDark",
+    type: "tertiary",
     children: "Button",
     size: "small",
   },
 };
-export const TextDarkDefault: Story = {
+export const TertiaryDefault: Story = {
   args: {
-    type: "textDark",
+    type: "tertiary",
     children: "Button",
 
   },
 };
-export const TextDarkLarge: Story = {
+export const TertiaryLarge: Story = {
   args: {
-    type: "textDark",
+    type: "tertiary",
     children: "Button",
     size: "large",
 
