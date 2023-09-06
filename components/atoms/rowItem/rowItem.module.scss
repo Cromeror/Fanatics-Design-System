@@ -1,0 +1,13 @@
+@import "../../../themes/antd.tokens";
+
+.rowItemCell {
+  padding: #{$paddingSmall}px;
+
+  &Wrapper {
+    display: flex;
+    gap: #{$marginSmall}px;
+    font-size: #{$fontSizeBodyText-small}px;
+    color: $colorText;
+    font-family: $fontFamily;
+  }
+}

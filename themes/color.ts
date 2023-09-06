@@ -64,14 +64,14 @@ export const Color = {
 
   //Icons
   colorIcon: "#25292f73",
-  colorIconHover: "#25292F 0.88",
+  colorIconHover: "#25292fe0",
 
   //Backgrounds
   colorBgContainer: "#ffffff",
   colorBgContainerDisabled: "#25292f0a",
   colorBgLayout: "#F5F6F8",
   colorBgElevated: "#ffffff",
-  controlItemBgHover: "#0000000a",
+  controlItemBgHover: "#25292f0a",
   controlItemBgActive: "#e6f4ff",
   controlItemBgActiveHover: "#bae0ff",
   controlItemBgActiveDisabled: "#00000026",
@@ -84,7 +84,7 @@ export const Color = {
 
   //Border y Drivers
   colorBorder: "#25292F29",
-  colorBorderSecondary: "#25292F 0.08",
+  colorBorderSecondary: "#25292f14",
   colorSplit: "#25292F0F",
 
   //Success

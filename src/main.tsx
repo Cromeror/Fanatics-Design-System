@@ -9,7 +9,7 @@ import { ConfigProvider, Space, Typography } from "antd";
 import { lightTheme } from "../themes/light-theme";
 import { TableExample } from "../components/table/TableExample";
 import { HeaderItem } from "../components/table/HeaderItem";
-import { RowItem } from "../components/table/RowItem";
+import { RowItem } from "../components/atoms/rowItem/RowItem";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -19,6 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Heading as={Typography.Title}>Table cell text</Heading>
           <Title as={Typography.Text}>Table cell text</Title>
           <BodyText underline={true}>Table cell text</BodyText>
+          <BodyText size="small">Body small</BodyText>
+          <Heading size="small">Heading small</Heading>
+          <Title size="small">Title small</Title>
         </Space>
         <Space>
           <Logotype type="primary" />

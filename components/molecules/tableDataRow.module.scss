@@ -1,0 +1,23 @@
+@import "themes/antd.tokens.scss";
+
+.tableDataRow {
+  background-color: $colorBgContainer;
+  padding-left: #{$paddingSmall}px;
+  padding-right: #{$paddingSmall}px;
+
+  & > td {
+    border-bottom: 1px solid $colorSplit;
+  }
+
+  &:hover {
+    background-color: $controlItemBgHover;
+  }
+
+  &Selected {
+    background-color: $controlItemBgActive;
+
+    &:hover {
+      background-color: $controlItemBgActiveHover;
+    }
+  }
+}

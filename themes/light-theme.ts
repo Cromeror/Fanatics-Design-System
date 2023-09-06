@@ -32,9 +32,9 @@ export const lightTheme = {
     "lineHeightTitle-large": "26px",
     "lineHeightTitle-medium": "24px",
     "lineHeightTitle-small": "22px",
-    "fontSizeTitle-large": 18,
-    "fontSizeTitle-medium": 16,
-    "fontSizeTitle-small": "14px",
+    "fontSizeTitle-large": "24px",
+    "fontSizeTitle-medium": "18px",
+    "fontSizeTitle-small": "15px",
 
     // BodyText
     "fontSizeBodyText-extraLarge": 20,
