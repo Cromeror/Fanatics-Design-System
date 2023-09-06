@@ -1,0 +1,29 @@
+@import "../../../themes/antd.tokens";
+
+.expandControlContainer {
+  border-radius: 2px;
+  border: 1px solid $colorSplit;
+  background: $colorBackground;
+  max-width: 16px;
+  min-width: 16px;
+  max-height: 16px;
+  min-height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.controlExpanded {
+    border: 1px solid $colorPrimary;
+
+    & .icon {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.icon {
+  margin: auto;
+  color: $colorText;
+  width: 10px;
+  height: 10px;
+}

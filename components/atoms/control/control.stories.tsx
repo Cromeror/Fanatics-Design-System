@@ -52,3 +52,17 @@ export const Dropdown: Story = {
     type: "dropdown",
   },
 };
+
+export const Expanded: Story = {
+  args: {
+    type: "expand",
+    checked: false
+  },
+};
+
+export const Collapse: Story = {
+  args: {
+    type: "collapse",
+    checked: false
+  },
+};

@@ -1,6 +1,14 @@
 @import "../../../themes/antd.tokens";
 
+.controlContainer {
+  display: flex;
+  display: flex;
+  align-items: center;
+  gap: #{$marginExtraSmall}px;
+}
+
 .icon {
-  margin-left: #{$marginExtraSmall}px;
   color: $colorText;
+  width: 12px;
+  height: 12px;
 }

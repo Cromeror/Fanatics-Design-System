@@ -2,7 +2,9 @@ import Checkbox from "../checkbox";
 import Radio from "../radio";
 import React from "react";
 import styles from "./control.module.scss";
-import { DownOutlined } from "@ant-design/icons";
+import {DownOutlined} from "@ant-design/icons";
+import {ExpandControl} from "./ExpandControl";
+import {CollapseControl} from "./CollapseControl";
 
 export interface ControlProps {
   type?:
@@ -13,20 +15,23 @@ export interface ControlProps {
     | "indeterminate"
     | "expand"
     | "collapse";
+  checked?: boolean;
 }
 
-export const Control = ({ type = "empty" }: ControlProps) => {
+export const Control = ({type = "empty", checked}: ControlProps) => {
   return (
     <>
-      {type === "radio" && <Radio />}
+      {type === "collapse" && <CollapseControl checked={checked}/>}
+      {type === "expand" && <ExpandControl checked={checked}/>}
+      {type === "radio" && <Radio/>}
       {type === "dropdown" && (
-        <>
-          <Checkbox />
-          <DownOutlined className={styles.icon} />
-        </>
+        <div className={styles.controlContainer}>
+          <Checkbox/>
+          <DownOutlined className={styles.icon}/>
+        </div>
       )}
-      {type !== "radio" && type !== "empty" && type != "dropdown" && (
-        <Checkbox />
+      {type !== "radio" && type !== "empty" && type !== "dropdown" && type !== "expand" && type !== "collapse" && (
+        <Checkbox/>
       )}
     </>
   );
