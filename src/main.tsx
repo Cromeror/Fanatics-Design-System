@@ -25,29 +25,17 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Logotype type="reversed" />
         </Space>
         <Space>
-          <Button type="primary">Primary Button</Button>
-          <Button type="primary" size="small">
-            Primary Button
-          </Button>
-          <Button type="primary" size="large">
-            Primary Button
-          </Button>
-          <Button type="primary" danger>
-            Primary Button
-          </Button>
-          <Button type="secondary">Secondary Button</Button>
-          <Button type="secondary" danger>
-            Secondary Button
-          </Button>
-          <Button type="text">Text Button</Button>
-          <Button type="text" danger>
-            Text Button
-          </Button>
-          <Button type="link">Link Button</Button>
-          <Button type="link" danger>
-            Link Button
-          </Button>
-          <Button type="textDark">Text Dark Button</Button>
+          <Button type='primary' >Primary Button</Button>
+          <Button type='primary' size='small'>Primary Button</Button>
+          <Button type='primary' size='large'>Primary Button</Button>
+          <Button type='primary' danger>Primary Button</Button>
+          <Button type='secondary'>Secondary Button</Button>
+          <Button type='secondary' danger>Secondary Button</Button>
+          <Button type='text'>Text Button</Button>
+          <Button type='text' danger>Text Button</Button>
+          <Button type='link'>Link Button</Button>
+          <Button type='link' danger>Link Button</Button>
+          <Button type='tertiary'>Text Dark Button</Button>
         </Space>
         <Space>
           <TableExample></TableExample>

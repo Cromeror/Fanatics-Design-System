@@ -7,7 +7,7 @@ const BUTTON_TYPE = {
   secondary: 'default',
   text: 'text',
   link: 'link',
-  "text-dark": "primary"
+  tertiary: "primary"
 };
 
 const BUTTON_SIZE_MAP = {
@@ -27,7 +27,7 @@ const BUTTON_CLASSNAME_MAP = {
   secondary: stylesButton.secondaryButton,
   link: stylesButton.linkButton,
   text: stylesButton.textButton,
-  "textDark": stylesButton.textDarkButton
+  tertiary: stylesButton.tertiaryButton
 }
 
 const BUTTON_DANGER_CLASSNAME_MAP = {
@@ -35,11 +35,11 @@ const BUTTON_DANGER_CLASSNAME_MAP = {
   secondary: stylesButton.secondaryButtonDanger,
   link: stylesButton.linkButtonDanger,
   text: stylesButton.textButtonDanger,
-  "textDark": stylesButton.primaryButtonDanger //Danger it's not defined for button text dark
+  tertiary: stylesButton.primaryButtonDanger
 }
 
 export interface ButtonProps {
-  type?: "primary" | "secondary" | "link" | "text" | "textDark";
+  type?: "primary" | "secondary" | "link" | "text" | "tertiary";
   size?: 'small' | 'default' | 'large';
   disabled?: boolean;
   danger?: boolean;
