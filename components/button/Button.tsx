@@ -1,5 +1,6 @@
 import {Button as AntdButton, ConfigProvider} from "antd";
 import stylesButton from "./button.module.scss"
+import classNames from "classnames";
 
 const BUTTON_TYPE = {
   primary: 'primary',
@@ -13,6 +14,12 @@ const BUTTON_SIZE_MAP = {
   small: 'small',
   default: 'middle',
   large: 'large',
+};
+
+const BUTTON_SIZE_CLASSNAME_MAP = {
+  small: stylesButton.sizeSmall,
+  default: stylesButton.sizeMiddle,
+  large: stylesButton.sizeLarge,
 };
 
 const BUTTON_CLASSNAME_MAP = {
@@ -49,7 +56,11 @@ export const customTheme = {
 export const Button = ({size = "default", type = "primary", danger, ...otherProps}: ButtonProps) => (
   <ConfigProvider theme={customTheme}>
     <AntdButton
-      className={`${!!danger ? BUTTON_DANGER_CLASSNAME_MAP[type] : BUTTON_CLASSNAME_MAP[type]}`}
+      className={
+        classNames(
+          !!danger ? BUTTON_DANGER_CLASSNAME_MAP[type] : BUTTON_CLASSNAME_MAP[type],
+          BUTTON_SIZE_CLASSNAME_MAP[size]
+        )}
       size={BUTTON_SIZE_MAP[size]}
       type={BUTTON_TYPE[type]}
       danger={danger}
