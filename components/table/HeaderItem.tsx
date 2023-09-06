@@ -46,7 +46,7 @@ export const HeaderItem: FC<HeaderItemProps> = ({
   type = "default",
 }: HeaderItemProps) => {
   const [searchText, setSearchText] = useState("");
-  const hasFilters = filters.length > 0;
+  const hasFilters = filters!.length > 0;
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setSearchText(e.target.value);
