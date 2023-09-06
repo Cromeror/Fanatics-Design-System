@@ -14,6 +14,7 @@ export interface PaginationProps {
   selected?: boolean;
   disabled?: boolean;
   direction?: "left" | "right";
+  onClick?: () => void;
 }
 
 export const Pagination = ({
@@ -22,6 +23,7 @@ export const Pagination = ({
   selected = false,
   disabled = false,
   direction = "left",
+  onClick,
 }: PaginationProps) => {
   return (
     <div
@@ -30,6 +32,7 @@ export const Pagination = ({
         selected && type === "number" && styles.selected,
         disabled && styles.disabled
       )}
+      onClick={onClick}
     >
       {type === "number" && value}
       {type === "arrow" && direction === "left" && <LeftOutlined />}
