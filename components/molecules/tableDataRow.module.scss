@@ -1,0 +1,15 @@
+@import "themes/antd.tokens.scss";
+
+.tableDataRow {
+  //background-color: $colorTextLightSolid;
+  //  border-bottom: 1px solid $controlItemBgHover;
+  //gap: #{$marginSmall}px;
+
+  &:hover {
+    background-color: $controlItemBgActiveHover;
+  }
+
+  &Selected {
+    background-color: $controlItemBgActive;
+  }
+}
