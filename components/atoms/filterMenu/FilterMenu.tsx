@@ -1,7 +1,7 @@
 import { Checkbox, Input, Dropdown, CheckboxOptionType } from "antd";
 import styles from "./filterMenu.module.scss";
 import { SearchOutlined } from "@ant-design/icons";
-import type { Options } from "./HeaderItem";
+import type { Options } from "../headerItem/HeaderItem";
 import React, { ReactNode, useEffect, useState } from "react";
 
 interface FilterMenuProps {

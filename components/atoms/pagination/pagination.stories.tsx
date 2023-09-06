@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Pagination } from "./Pagination";
+import type {Meta, StoryObj} from "@storybook/react";
+import {Pagination} from "./Pagination";
 
 const meta = {
   title: "Atoms/Pagination",
@@ -11,7 +11,7 @@ const meta = {
       control: {
         type: "select",
       },
-      table: { defaultValue: { summary: "number" } },
+      table: {defaultValue: {summary: "number"}},
       description: "Style of pagination",
     },
     direction: {
@@ -19,21 +19,21 @@ const meta = {
       control: {
         type: "select",
       },
-      table: { defaultValue: { summary: "left" } },
+      table: {defaultValue: {summary: "left"}},
       description: "Direction of arrow",
     },
     disabled: {
       control: {
         type: "boolean",
       },
-      table: { defaultValue: { summary: false } },
+      table: {defaultValue: {summary: false}},
       description: "Disabled state of pagination",
     },
     selected: {
       control: {
         type: "boolean",
       },
-      table: { defaultValue: { summary: false } },
+      table: {defaultValue: {summary: false}},
       description: "Selected state for number type",
     },
     value: {
@@ -43,11 +43,11 @@ const meta = {
       description: "Value for type number",
     },
   },
-} satisfies Meta<typeof Pagination>;
+} as Meta<typeof Pagination>;
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Pagination>;
 
 export const Number: Story = {
   args: {

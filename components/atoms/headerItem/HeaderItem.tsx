@@ -12,7 +12,7 @@ import { Input } from "antd";
 import { Select } from "../select/Select";
 import classNames from "classnames";
 import { SelectValue } from "antd/es/select";
-import { FilterMenu } from "./FilterMenu";
+import { FilterMenu } from "../filterMenu/FilterMenu";
 
 export type Options = {
   label: React.ReactNode;
@@ -61,7 +61,7 @@ export const HeaderItem: FC<HeaderItemProps> = ({
           (type !== "default" || hasFilters) && styles.headerItem__hasInput
         )}
       >
-        <BodyText size={"small"}>{title}</BodyText>
+        {title}
         <div className={styles.iconsContainer}>
           {sorter && <SorterComponent />}
           {hasFilters && (

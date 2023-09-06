@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { ConfigProvider, Dropdown, Table } from "antd";
-import { HeaderItem } from "./HeaderItem";
+import { HeaderItem } from "../atoms/headerItem/HeaderItem";
 
 const columnsExample = [
   {

@@ -1,5 +1,5 @@
 import {ConfigProvider, Table as TableAntd} from "antd";
-import {HeaderItem} from "../../table/HeaderItem";
+import {HeaderItem} from "../../atoms/headerItem/HeaderItem";
 import {lightTheme} from "../../../themes/light-theme";
 import {RowItem} from "../../atoms/rowItem/RowItem";
 import {TableDataRow} from "../../molecules/TableDataRow";

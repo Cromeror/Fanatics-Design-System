@@ -1,14 +1,14 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { Heading } from "../components/typography/Heading";
-import { Title } from "../components/typography/Title";
-import { BodyText } from "../components/typography/BodyText";
-import { Button } from "../components/button/Button";
-import { Logotype } from "../components/logotype/Logotype";
+import { Heading } from "../components/atoms/typography/Heading";
+import { Title } from "../components/atoms/typography/Title";
+import { BodyText } from "../components/atoms/typography/BodyText";
+import { Button } from "../components/atoms/button/Button";
+import { Logotype } from "../components/atoms/logotype/Logotype";
 import { ConfigProvider, Space, Typography } from "antd";
 import { lightTheme } from "../themes/light-theme";
 import { TableExample } from "../components/table/TableExample";
-import { HeaderItem } from "../components/table/HeaderItem";
+import { HeaderItem } from "../components/atoms/headerItem/HeaderItem";
 import { RowItem } from "../components/atoms/rowItem/RowItem";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

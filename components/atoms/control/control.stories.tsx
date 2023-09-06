@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Control } from "./Control";
+import type {Meta, StoryObj} from "@storybook/react";
+import {Control} from "./Control";
 
 const meta = {
   title: "Atoms/Control",
@@ -19,15 +19,15 @@ const meta = {
       control: {
         type: "select",
       },
-      table: { defaultValue: { summary: "radio" } },
+      table: {defaultValue: {summary: "radio"}},
       description: "Style of Control",
     },
   },
-} satisfies Meta<typeof Control>;
+} as Meta<typeof Control>;
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Control>;
 
 export const Checkbox: Story = {
   args: {

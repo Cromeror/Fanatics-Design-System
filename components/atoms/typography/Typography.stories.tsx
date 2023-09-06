@@ -34,26 +34,26 @@ const meta = {
       options: ["extra-large", "large", "medium", "small", "extra-small"],
     },
     strong: {
-      if: { arg: 'type', eq: 'BodyText' },
+      if: {arg: 'type', eq: 'BodyText'},
       control: "boolean"
     },
     underline: {
-      if: { arg: 'type', eq: 'BodyText' },
+      if: {arg: 'type', eq: 'BodyText'},
       control: "boolean"
     },
     italic: {
-      if: { arg: 'type', eq: 'BodyText' },
+      if: {arg: 'type', eq: 'BodyText'},
       control: "boolean"
     },
     delete: {
-      if: { arg: 'type', eq: 'BodyText' },
+      if: {arg: 'type', eq: 'BodyText'},
       control: "boolean"
     }
   },
-} satisfies Meta<typeof BodyText | Heading | Title>;
+} as Meta<typeof BodyText | Heading | Title>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof BodyText | Heading | Title>;
 
 export const Default: Story = {
   args: {

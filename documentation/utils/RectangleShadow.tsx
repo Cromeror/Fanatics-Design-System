@@ -1,6 +1,6 @@
 import styles from "./Rectangle.module.scss";
 import { Col, Row } from 'antd';
-import { BodyText } from "../../components/typography/BodyText";
+import { BodyText } from "../../components/atoms/typography/BodyText";
 import classNames from "classnames";
 
 

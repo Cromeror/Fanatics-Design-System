@@ -1,6 +1,6 @@
 import React from "react";
-import type { Meta } from "@storybook/react";
-import { Pagination } from "./Pagination";
+import type {Meta} from "@storybook/react";
+import {Pagination} from "./Pagination";
 
 const meta = {
   title: "organisms/Pagination",
@@ -8,11 +8,11 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     numbers: {
-      table: { defaultValue: { summary: "[]" } },
+      table: {defaultValue: {summary: "[]"}},
       description: "Numbers to show",
     },
   },
-} satisfies Meta<typeof Pagination>;
+} as Meta<typeof Pagination>;
 
 export default meta;
 

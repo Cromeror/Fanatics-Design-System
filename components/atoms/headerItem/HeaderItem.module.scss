@@ -1,4 +1,4 @@
-@import "themes/antd.tokens.scss";
+@import "../../../themes/antd.tokens";
 
 .headerItem {
   background-color: $colorBgLayout;
@@ -13,6 +13,13 @@
   &__titleSection {
     display: flex;
     gap: #{$marginSmall}px;
+    font-size: #{$fontSizeBodyText-small}px;
+    line-height: $lineHeightBodyText-small;
+    font-weight: 600;
+    font-family: $fontFamily;
+    color: $colorText;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
     & > *:first-child {
       flex: 1;
