@@ -1,5 +1,11 @@
 @import "themes/antd.tokens";
 
+.size {
+  &Middle {
+    font-size: #{$fontSizeBodyText-base}px;
+  }
+}
+
 .buttonDisable {
   color: $colorSecondaryBgHover;
   border: 1px solid $colorBorder;
@@ -10,6 +16,16 @@
   border: 1px solid $colorPrimary;
   background: $colorPrimary;
   color: $colorTextLightSolid;
+
+  &.size {
+    &Small {
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
 
   &:not(:disabled):not(.ant-btn-disabled) {
     &:hover {
@@ -66,6 +82,16 @@
   color: $colorText;
   background: $colorBgContainer;
 
+  &.size {
+    &Small {
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
+
   &:not(:disabled):not(.ant-btn-disabled) {
     &:hover {
       color: $colorPrimaryHover;
@@ -118,6 +144,15 @@
 }
 
 .textButton {
+  &.size {
+    &Small {
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
 
   &:not(:disabled):not(.ant-btn-disabled) {
 
@@ -175,6 +210,16 @@
 }
 
 .linkButton {
+  &.size {
+    &Small {
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
+
   &:not(:disabled):not(.ant-btn-disabled) {
     color: $colorPrimaryBase;
     border: 0;
@@ -226,6 +271,16 @@
 }
 
 .textDarkButton {
+  &.size {
+    &Small {
+      font-size: #{$fontSizeBodyText-small}px;
+    }
+
+    &Large {
+      font-size: #{$fontSizeBodyText-large}px;
+    }
+  }
+
   &:not(:disabled):not(.ant-btn-disabled) {
     background: $colorSecondaryBase;
     color: $colorItemText;
