@@ -2,6 +2,7 @@
 
 .size {
   &Middle {
+    padding: 0 #{$padding}px;
     font-size: #{$fontSizeBodyText-base}px;
   }
 }
@@ -19,10 +20,12 @@
 
   &.size {
     &Small {
+      padding: 0 #{$paddingSmall}px;
       font-size: #{$fontSizeBodyText-small}px;
     }
 
     &Large {
+      padding: 0 #{$padding}px;
       font-size: #{$fontSizeBodyText-large}px;
     }
   }
@@ -84,10 +87,12 @@
 
   &.size {
     &Small {
+      padding: 0 #{$paddingSmall}px;
       font-size: #{$fontSizeBodyText-small}px;
     }
 
     &Large {
+      padding: 0 #{$padding}px;
       font-size: #{$fontSizeBodyText-large}px;
     }
   }
@@ -146,10 +151,12 @@
 .textButton {
   &.size {
     &Small {
+      padding: 0 #{$paddingSmall}px;
       font-size: #{$fontSizeBodyText-small}px;
     }
 
     &Large {
+      padding: 0 #{$padding}px;
       font-size: #{$fontSizeBodyText-large}px;
     }
   }
@@ -212,10 +219,12 @@
 .linkButton {
   &.size {
     &Small {
+      padding: 0 #{$paddingSmall}px;
       font-size: #{$fontSizeBodyText-small}px;
     }
 
     &Large {
+      padding: 0 #{$padding}px;
       font-size: #{$fontSizeBodyText-large}px;
     }
   }
@@ -273,10 +282,12 @@
 .tertiaryButton {
   &.size {
     &Small {
+      padding: 0 #{$paddingSmall}px;
       font-size: #{$fontSizeBodyText-small}px;
     }
 
     &Large {
+      padding: 0 #{$padding}px;
       font-size: #{$fontSizeBodyText-large}px;
     }
   }
