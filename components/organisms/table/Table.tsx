@@ -1,6 +1,5 @@
 import {ConfigProvider, Table as TableAntd} from "antd";
 import {HeaderItem} from "../../table/HeaderItem";
-import {customTheme} from "../../table/TableExample";
 import {lightTheme} from "../../../themes/light-theme";
 import {RowItem} from "../../atoms/rowItem/RowItem";
 import {TableDataRow} from "../../molecules/TableDataRow";
@@ -33,7 +32,9 @@ export const Table = ({columns, data}: TableProps) => {
 
   const customTheme = {
     token: {
-      colorBgContainer: lightTheme.token.colorBgContainer
+      colorBgContainer: lightTheme.token.colorBgContainer,
+      borderRadius: 0,
+      borderRadiusLG: 0
     },
   };
 
@@ -45,6 +46,7 @@ export const Table = ({columns, data}: TableProps) => {
                    // Agregar tu lógica de manejo de ordenación aquí
                  }}
                  components={{
+                   table: ({children}) => <table>{children}</table>,
                    header: {
                      wrapper: ({children}) => <thead>{children}</thead>,
                      cell: HeaderItem,
