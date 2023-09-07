@@ -31,10 +31,10 @@ const meta = {
       table: {defaultValue: {summary: "undefined"}},
     },
   },
-} satisfies Meta<typeof Button>;
+} as Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Button>;
 
 export const PrimarySmall: Story = {
   args: {
@@ -54,6 +54,13 @@ export const PrimaryLarge: Story = {
     type: "primary",
     children: "Button",
     size: "large",
+  },
+};
+export const PrimaryDisabled: Story = {
+  args: {
+    type: "primary",
+    children: "Button",
+    disabled: true
   },
 };
 
@@ -80,6 +87,14 @@ export const PrimaryLargeDanger: Story = {
     danger: true,
   },
 };
+export const PrimaryDangerDisabled: Story = {
+  args: {
+    type: "primary",
+    children: "Button",
+    danger: true,
+    disabled: true
+  },
+};
 
 export const SecondarySmall: Story = {
   args: {
@@ -99,6 +114,13 @@ export const SecondaryLarge: Story = {
     type: "secondary",
     children: "Button",
     size: "large",
+  },
+};
+export const SecondaryDisabled: Story = {
+  args: {
+    type: "secondary",
+    children: "Button",
+    disabled: true
   },
 };
 export const SecondarySmallDanger: Story = {
@@ -124,6 +146,13 @@ export const SecondaryLargeLarge: Story = {
     danger: true,
   },
 };
+export const SecondaryLargeDisabled: Story = {
+  args: {
+    type: "secondary",
+    children: "Button",
+    danger: true,
+  },
+};
 
 export const TextSmall: Story = {
   args: {
@@ -136,10 +165,8 @@ export const TextDefault: Story = {
   args: {
     type: "text",
     children: "Button",
-
   },
 };
-
 export const TextLarge: Story = {
   args: {
     type: "text",
@@ -148,25 +175,29 @@ export const TextLarge: Story = {
 
   },
 };
+export const TextDisabled: Story = {
+  args: {
+    type: "text",
+    children: "Button",
+    disabled: true
+  },
+};
 
 export const TextSmallDanger: Story = {
   args: {
     type: "text",
     children: "Button",
     size: "small",
-    danger:true
-
+    danger: true
   },
 };
-
 export const TextDefaultDanger: Story = {
   args: {
     type: "text",
     children: "Button",
-   danger: true,
+    danger: true,
   },
 };
-
 export const TextLargeDanger: Story = {
   args: {
     type: "text",
@@ -175,7 +206,14 @@ export const TextLargeDanger: Story = {
     danger: true,
   },
 };
-
+export const TextDangerDisabled: Story = {
+  args: {
+    type: "text",
+    children: "Button",
+    danger: true,
+    disabled: true
+  },
+};
 
 export const LinkSmall: Story = {
   args: {
@@ -184,7 +222,6 @@ export const LinkSmall: Story = {
     size: "small",
   },
 };
-
 export const LinkDefault: Story = {
   args: {
     type: "link",
@@ -196,6 +233,13 @@ export const LinkLarge: Story = {
     type: "link",
     children: "Button",
     size: "large",
+  },
+};
+export const LinkDisabled: Story = {
+  args: {
+    type: "link",
+    children: "Button",
+    disabled: true
   },
 };
 
@@ -222,6 +266,14 @@ export const LinkLargeDanger: Story = {
     danger: true,
   },
 };
+export const LinkDangerDisabled: Story = {
+  args: {
+    type: "link",
+    children: "Button",
+    disabled: true,
+    danger: true,
+  },
+};
 
 export const TertiarySmall: Story = {
   args: {
@@ -242,7 +294,13 @@ export const TertiaryLarge: Story = {
     type: "tertiary",
     children: "Button",
     size: "large",
-
+  },
+};
+export const TertiaryDisabled: Story = {
+  args: {
+    type: "tertiary",
+    children: "Button",
+    disabled: true
   },
 };
 

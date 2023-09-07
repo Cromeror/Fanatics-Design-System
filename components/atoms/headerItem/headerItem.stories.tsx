@@ -39,70 +39,80 @@ export const Default: Story = {
   },
 };
 
-export const ShowSorter: Story = {
+export const BulkInput: Story = {
+  args: {
+    title: "Table header",
+    type: "bulk"
+  },
+};
+
+export const BulkSelect: Story = {
+  args: {
+    title: "Table header",
+    sorter: () => false,
+    filters: true,
+    search: true,
+    type: "select",
+    bulkSelectOptions: [
+      {value: 'Option 1', label: 'Option 1'},
+      {value: 'Option 2', label: 'Option 2'}
+    ]
+  },
+};
+
+export const Filter: Story = {
+  args: {
+    title: "Table header",
+    filters: [
+      {
+        label: "John Brown",
+        value: "John Brown",
+      },
+      {
+        label: "Jim Green",
+        value: "Jim Green",
+      },
+      {
+        label: "Joe Black",
+        value: "Joe Black",
+      },
+    ],
+  },
+};
+
+export const Search: Story = {
+  args: {
+    title: "Table header",
+    search: true
+  },
+};
+
+export const Sorter: Story = {
   args: {
     title: "Table header",
     sorter: () => false
   },
 };
 
-export const ShowSearch: Story = {
-  args: {
-    title: "Table header",
-    search: true
-  },
-};
 
-export const ShowFilters: Story = {
-  args: {
-    title: "Table header",
-    filters: true
-  },
-};
-
-export const ShowSorterAndFilter: Story = {
+export const SorterFilterAndSearch: Story = {
   args: {
     title: "Table header",
     sorter: () => false,
-    filters: true,
-  },
-};
-
-export const ShowSorterAndSearch: Story = {
-  args: {
-    title: "Table header",
-    sorter: () => false,
-    search: true
-  },
-};
-
-export const ShowFilterAndSearch: Story = {
-  args: {
-    title: "Table header",
-    filters: true,
-    search: true
-  },
-};
-
-export const ShowSorterFilterSearch: Story = {
-  args: {
-    title: "Table header",
-    sorter: () => false,
-    filters: true,
-    search: true
-  },
-};
-
-export const TypeSelectWithShowSorterFilterAndSearch: Story = {
-  args: {
-    title: "Table header",
-    sorter: () => false,
-    filters: true,
     search: true,
-    type:"select",
-    bulkSelectOptions: [
-      {value: 'Option 1', label: 'Option 1'},
-      {value: 'Option 2', label: 'Option 2'}
-    ]
+    filters: [
+      {
+        label: "John Brown",
+        value: "John Brown",
+      },
+      {
+        label: "Jim Green",
+        value: "Jim Green",
+      },
+      {
+        label: "Joe Black",
+        value: "Joe Black",
+      },
+    ],
   },
 };

@@ -8,7 +8,7 @@
 }
 
 .buttonDisable {
-  color: $colorSecondaryBgHover;
+  color: $colorTextDisabled;
   border: 1px solid $colorBorder;
   background: $colorBgContainerDisabled;
 }
@@ -162,7 +162,6 @@
   }
 
   &:not(:disabled):not(.ant-btn-disabled) {
-
     color: $colorText;
 
     &:hover {
@@ -181,10 +180,9 @@
     }
   }
 
-  &.ant-btn-disabled,
-  &.primaryButton:disabled {
-    background-color: $colorSecondaryBg;
-    color: $colorSecondaryBgHover;
+  &.ant-btn-disabled, &.primaryButton:disabled {
+    background-color: transparent;
+    color: $colorTextDisabled;
     border: 0;
   }
 
@@ -210,10 +208,11 @@
     }
 
     &.ant-btn-disabled, &:disabled {
-      @extend .buttonDisable
+      background-color: transparent;
+      color: $colorTextDisabled;
+      border: 0;
     }
   }
-
 }
 
 .linkButton {
@@ -247,10 +246,9 @@
     }
   }
 
-  &.ant-btn-disabled,
-  &.primaryButton:disabled {
-    background-color: $colorSecondaryBg;
-    color: $colorSecondaryBgHover;
+  &.ant-btn-disabled, &:disabled {
+    background-color: transparent;
+    color: $colorTextDisabled;
     border: 0;
   }
 
@@ -274,7 +272,9 @@
     }
 
     &.ant-btn-disabled, &:disabled {
-      @extend .buttonDisable
+      background-color: transparent;
+      color: $colorTextDisabled;
+      border: 0;
     }
   }
 }
@@ -311,9 +311,9 @@
     }
   }
 
-  &.ant-btn-disabled,
-  &.primaryButton:disabled {
-    background-color: $colorSecondaryHover;
-    color: $colorSecondaryBgHover;
+  &.ant-btn-disabled, &:disabled {
+    opacity: 0.5;
+    background-color: $colorSecondaryBase;
+    color: $colorTextLightSolid;
   }
 }
