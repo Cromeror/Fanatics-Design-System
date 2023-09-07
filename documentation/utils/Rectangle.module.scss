@@ -16,13 +16,13 @@
   flex-shrink: 0;
 
   &_evaluationLow {
-    box-shadow: $evaluationLow,
+    box-shadow: $elevationLow,
   }
   &_evaluationMiddle {
-    box-shadow: $evaluationMiddle,
+    box-shadow: $elevationMiddle,
   }
   &_evaluationHigh {
-    box-shadow: $evaluationHigh,
+    box-shadow: $elevationHigh,
   }
   &_focusPrimary {
     box-shadow: $focusPrimary,
