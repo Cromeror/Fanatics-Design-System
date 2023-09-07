@@ -9,11 +9,9 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     children: {
-      control: {
-        type: null,
-      },
-      table: {defaultValue: {summary: "undefined"}},
-      description: "`React.ReactNode | undefined`",
+      table: {
+        disable: true
+      }
     },
     options: {
       table: {defaultValue: {summary: "[]"}},

@@ -12,8 +12,9 @@ const meta: Meta = {
   tags: ["autodocs"],
   argTypes: {
     children: {
-      control: "text",
-      description: "Content to display inside the row item",
+      table: {
+        disable: true
+      }
     },
     selected: {
       control: {
