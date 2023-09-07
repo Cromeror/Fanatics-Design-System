@@ -41,6 +41,7 @@ const BUTTON_DANGER_CLASSNAME_MAP = {
 export interface ButtonProps {
   type?: "primary" | "secondary" | "link" | "text" | "tertiary";
   size?: 'small' | 'default' | 'large';
+  icon?: boolean;
   disabled?: boolean;
   danger?: boolean;
 }
@@ -53,12 +54,13 @@ export const customTheme = {
   }
 }
 
-export const Button = ({size = "default", type = "primary", danger, ...otherProps}: ButtonProps) => (
+export const Button = ({size = "default", type = "primary", danger, icon = false, ...otherProps}: ButtonProps) => (
   <ConfigProvider theme={customTheme}>
     <AntdButton
       className={
         classNames(
           !!danger ? BUTTON_DANGER_CLASSNAME_MAP[type] : BUTTON_CLASSNAME_MAP[type],
+          icon && stylesButton.iconButton,
           BUTTON_SIZE_CLASSNAME_MAP[size]
         )}
       size={BUTTON_SIZE_MAP[size]}

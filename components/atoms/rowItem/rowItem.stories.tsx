@@ -4,6 +4,7 @@ import {RowItem} from "./RowItem";
 import {Tag, Input} from "antd";
 import {EditOutlined, DeleteOutlined} from "@ant-design/icons";
 import {StoryObj} from "@storybook/react";
+import Button from "../button";
 
 const meta: Meta = {
   title: "Atoms/RowItem",
@@ -36,8 +37,12 @@ export const Actions: Story = {
   args: {
     children: (
       <>
-        <EditOutlined/>
-        <DeleteOutlined/>
+        <Button type={"link"} size={"small"} icon={true}>
+          <EditOutlined/>
+        </Button>
+        <Button type={"link"} size={"small"} icon={true}>
+          <DeleteOutlined/>
+        </Button>
       </>
     ),
   },

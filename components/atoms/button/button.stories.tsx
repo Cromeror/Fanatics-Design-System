@@ -1,5 +1,6 @@
 import type {Meta, StoryObj} from "@storybook/react";
 import {Button} from "./Button";
+import {EditOutlined} from "@ant-design/icons";
 
 const meta = {
   title: "Atoms/Button",
@@ -304,4 +305,41 @@ export const TertiaryDisabled: Story = {
   },
 };
 
+export const IconButton: Story = {
+  args: {
+    children:  <EditOutlined/>,
+    icon: true
+  },
+};
 
+export const IconSecondaryButton: Story = {
+  args: {
+    children:  <EditOutlined/>,
+    icon: true,
+    type: "secondary"
+  },
+};
+
+export const IconTextButton: Story = {
+  args: {
+    children:  <EditOutlined/>,
+    icon: true,
+    type: "text"
+  },
+};
+
+export const IconLinkButton: Story = {
+  args: {
+    children:  <EditOutlined/>,
+    icon: true,
+    type: "link"
+  },
+};
+
+export const IconTertiaryButton: Story = {
+  args: {
+    children:  <EditOutlined/>,
+    icon: true,
+    type: "tertiary"
+  },
+};

@@ -7,6 +7,36 @@
   }
 }
 
+.iconButton {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.size {
+    &Small {
+      min-height: #{$controlHeightSmall}px;
+      min-width: #{$controlHeightSmall}px;
+      max-height: #{$controlHeightSmall}px;
+      max-width: #{$controlHeightSmall}px;
+    }
+
+    &Middle {
+      min-height: #{$controlHeight}px;
+      min-width: #{$controlHeight}px;
+      max-height: #{$controlHeight}px;
+      max-width: #{$controlHeight}px;
+    }
+
+    &Large {
+      min-height: #{$controlHeightLarge}px;
+      min-width: #{$controlHeightLarge}px;
+      max-height: #{$controlHeightLarge}px;
+      max-width: #{$controlHeightLarge}px;
+    }
+  }
+}
+
 .buttonDisable {
   color: $colorTextDisabled;
   border: 1px solid $colorBorder;
