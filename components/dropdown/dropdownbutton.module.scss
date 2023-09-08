@@ -1,0 +1,34 @@
+@import "themes/antd.tokens";
+
+.buttonDisable {
+  color: $colorTextDisabled;
+}
+
+.basicInline {
+  color: $colorPrimaryBase;
+  border: none;
+  box-shadow: none;
+  &:not(:disabled):not(.ant-btn-disabled) {
+    &:hover {
+      color: $colorPrimaryHover;
+    }
+    &:active {
+      color: $colorPrimaryActive;
+    }
+    &:focus {
+      color: $colorPrimaryBase;
+    }
+  }
+  &.ant-btn-disabled, &:disabled {
+    @extend .buttonDisable
+  }
+}
+
+.twoFold {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.twoFoldSecond {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
